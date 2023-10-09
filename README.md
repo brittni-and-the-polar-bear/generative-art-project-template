@@ -1,7 +1,5 @@
 # generative-art-project-template
 
-Copyright (c) 2023 brittni and the polar bear
-
 A template for new brittni and the polar bear generative art projects using TypeScript with p5.js
 
 ## LICENSE Information
