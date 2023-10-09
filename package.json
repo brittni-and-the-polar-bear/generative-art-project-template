@@ -1,0 +1,24 @@
+{
+  "name": "generative-art-project-template",
+  "version": "1.0.0",
+  "description": "A template for new brittni and the polar bear generative art projects using TypeScript with p5.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brittni-and-the-polar-bear/generative-art-project-template.git"
+  },
+  "keywords": [
+    "generative art",
+    "typescript",
+    "p5.js"
+  ],
+  "author": "brittni and the polar bear",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/brittni-and-the-polar-bear/generative-art-project-template/issues"
+  },
+  "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-project-template#readme"
+}
