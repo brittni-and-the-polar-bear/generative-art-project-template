@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "moduleResolution": "bundler",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "isolatedModules": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "outDir": "out"
+  },
+  "include": ["src/**/*.ts"]
+}
