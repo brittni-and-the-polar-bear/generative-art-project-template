@@ -3,3 +3,6 @@
 # node and npm
 node_modules/
 package-lock.json
+
+# generated files
+out/

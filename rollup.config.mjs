@@ -1,11 +1,13 @@
 import typescript from '@rollup/plugin-typescript';
 
 export default {
-    input: 'src/sketch.ts',
+    input: 'src/index.ts',
     output: {
         dir: 'out',
-        format: 'iife',
+        format: 'es',
         sourcemap: true
     },
-    plugins: [typescript()]
+    plugins: [
+        typescript()
+    ]
 };
