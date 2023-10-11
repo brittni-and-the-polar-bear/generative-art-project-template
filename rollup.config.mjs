@@ -1,4 +1,6 @@
 import typescript from '@rollup/plugin-typescript';
+import html from '@rollup/plugin-html';
+import dev from 'rollup-plugin-dev';
 
 export default {
     input: 'src/index.ts',
@@ -8,6 +10,11 @@ export default {
         sourcemap: true
     },
     plugins: [
-        typescript()
+        typescript(),
+        html(),
+        dev({
+            dirs: ['out'],
+            spa: true
+        })
     ]
 };
