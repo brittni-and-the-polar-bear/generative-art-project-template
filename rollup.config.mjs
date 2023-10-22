@@ -25,6 +25,6 @@ export default {
         }),
         zip({
             dir: 'zip'
-        }),
+        })
     ]
 };
