@@ -17,7 +17,20 @@
     "typescript",
     "p5.js"
   ],
-  "author": "brittni and the polar bear",
+  "author": {
+    "name": "brittni and the polar bear",
+    "url": "https://brittni-and-the-polar-bear.github.io/"
+  },
+  "contributors": [
+    {
+      "name": "brittni watkins",
+      "url": "https://linktr.ee/brittniwatkins"
+    },
+    {
+      "name": "azurepolarbear",
+      "url": "https://linktr.ee/azurepolarbear"
+    }
+  ],
   "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/brittni-and-the-polar-bear/generative-art-project-template/issues"
@@ -28,9 +41,12 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@rollup/plugin-eslint": "^9.0.5",
     "@rollup/plugin-html": "^1.0.3",
     "@rollup/plugin-typescript": "^11.1.5",
-    "rollup": "^4.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "rollup": "^4.1.4",
     "rollup-plugin-dev": "^2.0.4",
     "rollup-plugin-zip": "^1.0.3"
   }

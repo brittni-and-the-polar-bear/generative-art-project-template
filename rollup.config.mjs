@@ -1,4 +1,5 @@
 import typescript from '@rollup/plugin-typescript';
+import eslint from '@rollup/plugin-eslint';
 import html from '@rollup/plugin-html';
 import dev from 'rollup-plugin-dev';
 import zip from 'rollup-plugin-zip';
@@ -12,6 +13,11 @@ export default {
     },
     plugins: [
         typescript(),
+        eslint({
+            include: ['src/**/*.ts', 'src/**/*.js'],
+            throwOnError: true,
+            throwOnWarning: true
+        }),
         html(),
         dev({
             dirs: ['out'],
@@ -19,6 +25,6 @@ export default {
         }),
         zip({
             dir: 'zip'
-        })
+        }),
     ]
 };
