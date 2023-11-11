@@ -1,6 +1,6 @@
 {
   "name": "generative-art-project-template",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A template for new brittni and the polar bear generative art projects using TypeScript with p5",
   "main": "index.ts",
   "scripts": {
@@ -48,6 +48,7 @@
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
     "rollup": "^4.3.1",
+    "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-dev": "^2.0.4",
     "rollup-plugin-zip": "^1.0.3"
   }

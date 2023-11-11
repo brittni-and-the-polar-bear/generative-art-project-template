@@ -2,6 +2,7 @@ import typescript from '@rollup/plugin-typescript';
 import eslint from '@rollup/plugin-eslint';
 import terser from '@rollup/plugin-terser';
 import html from '@rollup/plugin-html';
+import analyzer from "rollup-plugin-analyzer";
 import dev from 'rollup-plugin-dev';
 import zip from 'rollup-plugin-zip';
 
@@ -26,6 +27,9 @@ export default {
         exportFavicon(),
         html({
             title: 'Generative Art Template'
+        }),
+        analyzer({
+            summaryOnly: false
         }),
         dev({
             dirs: ['out'],
