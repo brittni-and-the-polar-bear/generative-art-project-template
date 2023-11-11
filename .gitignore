@@ -7,3 +7,6 @@ package-lock.json
 # generated files
 out/
 zip/
+
+# WebStorm
+.idea/

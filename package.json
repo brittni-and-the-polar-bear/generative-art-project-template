@@ -15,7 +15,7 @@
   "keywords": [
     "generative art",
     "typescript",
-    "p5.js"
+    "p5"
   ],
   "author": {
     "name": "brittni and the polar bear",
@@ -44,9 +44,9 @@
     "@rollup/plugin-eslint": "^9.0.5",
     "@rollup/plugin-html": "^1.0.3",
     "@rollup/plugin-typescript": "^11.1.5",
-    "@typescript-eslint/eslint-plugin": "^6.8.0",
-    "@typescript-eslint/parser": "^6.8.0",
-    "rollup": "^4.1.4",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "rollup": "^4.3.1",
     "rollup-plugin-dev": "^2.0.4",
     "rollup-plugin-zip": "^1.0.3"
   }
