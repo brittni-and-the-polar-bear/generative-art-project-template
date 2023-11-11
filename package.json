@@ -5,8 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --config",
-    "dev": "rollup --config --watch"
+    "build": "rm -r out zip; rollup --config",
+    "dev": "rm -r out zip; rollup --config --watch"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
   "devDependencies": {
     "@rollup/plugin-eslint": "^9.0.5",
     "@rollup/plugin-html": "^1.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",

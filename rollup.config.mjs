@@ -1,14 +1,18 @@
 import typescript from '@rollup/plugin-typescript';
 import eslint from '@rollup/plugin-eslint';
+import terser from '@rollup/plugin-terser';
 import html from '@rollup/plugin-html';
 import dev from 'rollup-plugin-dev';
 import zip from 'rollup-plugin-zip';
+
+import { readFileSync } from 'node:fs';
 
 export default {
     input: 'src/index.ts',
     output: {
         dir: 'out',
-        format: 'es',
+        format: 'umd',
+        name: 'GenerativeArtTemplate',
         sourcemap: true
     },
     plugins: [
@@ -18,7 +22,11 @@ export default {
             throwOnError: true,
             throwOnWarning: true
         }),
-        html(),
+        terser(),
+        exportFavicon(),
+        html({
+            title: 'Generative Art Template'
+        }),
         dev({
             dirs: ['out'],
             spa: true
@@ -28,3 +36,15 @@ export default {
         })
     ]
 };
+
+function exportFavicon() {
+    return {
+      generateBundle() {
+          this.emitFile({
+              type: 'asset',
+              fileName: 'favicon.ico',
+              source: readFileSync('./assets/icon/favicon.ico')
+          });
+      }
+    };
+}
