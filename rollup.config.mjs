@@ -1,4 +1,23 @@
+/*
+ * Copyright (C) 2023 Brittni Watkins.
+ *
+ * This file is a part of brittni and the polar bear's Generative Art Project Template,
+ * which is released under the GNU Affero General Public License, Version 3.0.
+ * You may not use this file except in compliance with the license.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. See LICENSE or go to
+ * https://www.gnu.org/licenses/agpl-3.0.en.html for full license details.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU Affero General Public License for more details.
+ */
+
 import typescript from '@rollup/plugin-typescript';
+import commonjs from "@rollup/plugin-commonjs";
+import nodeResolve from "@rollup/plugin-node-resolve";
 import eslint from '@rollup/plugin-eslint';
 import terser from '@rollup/plugin-terser';
 import html from '@rollup/plugin-html';
@@ -9,17 +28,28 @@ import zip from 'rollup-plugin-zip';
 import { readFileSync } from 'node:fs';
 
 export default {
-    input: 'src/index.ts',
+    input: 'src/sketch.ts',
     output: {
         dir: 'out',
         format: 'umd',
         name: 'GenerativeArtTemplate',
-        sourcemap: true
+        sourcemap: true,
+        preserveModules: false
     },
     plugins: [
         typescript(),
+        commonjs(),
+        nodeResolve({
+            extensions: [
+                '.js',
+                '.ts'
+            ]
+        }),
         eslint({
-            include: ['src/**/*.ts', 'src/**/*.js'],
+            include: [
+                'src/**/*.ts',
+                'src/**/*.js'
+            ],
             throwOnError: true,
             throwOnWarning: true
         }),
@@ -29,7 +59,7 @@ export default {
             title: 'Generative Art Template'
         }),
         analyzer({
-            summaryOnly: false
+            summaryOnly: true
         }),
         dev({
             dirs: ['out'],
@@ -43,12 +73,12 @@ export default {
 
 function exportFavicon() {
     return {
-      generateBundle() {
-          this.emitFile({
-              type: 'asset',
-              fileName: 'favicon.ico',
-              source: readFileSync('./assets/icon/favicon.ico')
-          });
-      }
+        generateBundle() {
+            this.emitFile({
+                type: 'asset',
+                fileName: 'favicon.ico',
+                source: readFileSync('./assets/icon/favicon.ico')
+            });
+        }
     };
 }

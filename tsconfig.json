@@ -3,9 +3,10 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "removeComments": true,
+    "removeComments": false,
     "isolatedModules": true,
     "preserveConstEnums": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "outDir": "out"
   },

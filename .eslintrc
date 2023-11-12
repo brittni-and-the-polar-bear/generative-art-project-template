@@ -39,7 +39,7 @@
     "@typescript-eslint/no-loss-of-precision": "error",
 
     "no-magic-numbers": "off",
-    "@typescript-eslint/no-magic-numbers": "error",
+    "@typescript-eslint/no-magic-numbers": "off",
 
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "error",

@@ -2,7 +2,7 @@
   "name": "generative-art-project-template",
   "version": "0.1.0",
   "description": "A template for new brittni and the polar bear generative art projects using TypeScript with p5",
-  "main": "index.ts",
+  "main": "sketch.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -r out zip; rollup --config",
@@ -37,12 +37,16 @@
   },
   "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-project-template#readme",
   "dependencies": {
+    "@types/p5": "^1.7.3",
+    "p5": "^1.8.0",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-eslint": "^9.0.5",
     "@rollup/plugin-html": "^1.0.3",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
