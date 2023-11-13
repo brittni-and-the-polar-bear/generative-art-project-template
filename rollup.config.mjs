@@ -20,6 +20,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import nodeResolve from "@rollup/plugin-node-resolve";
 import eslint from '@rollup/plugin-eslint';
 import terser from '@rollup/plugin-terser';
+import css from 'rollup-plugin-css-only';
 import html from '@rollup/plugin-html';
 import analyzer from "rollup-plugin-analyzer";
 import dev from 'rollup-plugin-dev';
@@ -55,8 +56,12 @@ export default {
         }),
         terser(),
         exportFavicon(),
+        css({
+            output: 'bundle.css'
+        }),
         html({
-            title: 'Generative Art Template'
+            title: 'Generative Art Template',
+            publicPath: './'
         }),
         analyzer({
             summaryOnly: true

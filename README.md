@@ -1,8 +1,8 @@
-# generative-art-project-template
+# Generative Art Project Template (TypeScript)
 
 Copyright (C) 2023 Brittni Watkins
 
-A template for new brittni and the polar bear generative art projects using TypeScript with p5.
+A template for new brittni and the polar bear generative art projects using [TypeScript](https://www.typescriptlang.org/) with [p5](https://p5js.org/).
 
 ## LICENSE Information
 
