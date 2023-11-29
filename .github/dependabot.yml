@@ -13,4 +13,5 @@ updates:
       prefix: "dependabot npm update"
       include: "scope"
     reviewers:
-      - "brittni-and-the-polar-bear/bpb"
+      - "blwatkins"
+      - "azurepolarbear"
