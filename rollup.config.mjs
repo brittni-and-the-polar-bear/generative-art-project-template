@@ -17,7 +17,7 @@
 
 import typescript from '@rollup/plugin-typescript';
 import commonjs from "@rollup/plugin-commonjs";
-import nodeResolve from "@rollup/plugin-node-resolve";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 import eslint from '@rollup/plugin-eslint';
 import terser from '@rollup/plugin-terser';
 import css from 'rollup-plugin-css-only';
@@ -42,14 +42,12 @@ export default {
         commonjs(),
         nodeResolve({
             extensions: [
-                '.js',
                 '.ts'
             ]
         }),
         eslint({
             include: [
-                'src/**/*.ts',
-                'src/**/*.js'
+                'src/**/*.ts'
             ],
             throwOnError: true,
             throwOnWarning: true
