@@ -41,14 +41,10 @@ export default {
         typescript(),
         commonjs(),
         nodeResolve({
-            extensions: [
-                '.ts'
-            ]
+            extensions: ['.ts']
         }),
         eslint({
-            include: [
-                'src/**/*.ts'
-            ],
+            include: ['src/**/*.ts'],
             throwOnError: true,
             throwOnWarning: true
         }),
@@ -66,6 +62,7 @@ export default {
         }),
         dev({
             dirs: ['out'],
+            host: '127.0.0.1',
             spa: true
         }),
         zip({
