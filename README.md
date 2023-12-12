@@ -1,8 +1,10 @@
-# Generative Art Project Template (TypeScript)
+# Color Scheme Explorer
 
 Copyright (C) 2023 Brittni Watkins
 
-A template for new brittni and the polar bear generative art projects using [TypeScript](https://www.typescriptlang.org/) with [p5](https://p5js.org/).
+A project for creating and testing new color schemes for generative art projects.
+
+This project should be kept in sync with [brittni-and-the-polar-bear/generative-art-project-template](https://github.com/brittni-and-the-polar-bear/generative-art-project-template).
 
 ## LICENSE Information
 

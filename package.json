@@ -1,7 +1,7 @@
 {
-  "name": "generative-art-project-template",
-  "version": "0.1.0",
-  "description": "A template for new brittni and the polar bear generative art projects using TypeScript with p5",
+  "name": "color-scheme-explorer",
+  "version": "0.0.0",
+  "description": "A project for creating and testing new color schemes for generative art projects.",
   "main": "sketch.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,13 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brittni-and-the-polar-bear/generative-art-project-template.git"
+    "url": "git+https://github.com/brittni-and-the-polar-bear/color-scheme-explorer.git"
   },
   "keywords": [
     "code art",
+    "color",
+    "color schemes",
+    "color palette",
     "generative art",
     "p5",
-    "template",
     "typescript"
   ],
   "author": {
@@ -37,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/brittni-and-the-polar-bear/generative-art-project-template/issues"
   },
-  "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-project-template#readme",
+  "homepage": "https://github.com/brittni-and-the-polar-bear/color-scheme-explorer#readme",
   "dependencies": {
     "@types/p5": "^1.7.4",
     "p5": "^1.9.0",
