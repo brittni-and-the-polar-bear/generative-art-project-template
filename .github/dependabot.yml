@@ -15,6 +15,13 @@ updates:
     commit-message:
       prefix: "dependabot npm update"
       include: "scope"
+    groups:
+      development-dependencies:
+        dependency-type: "development"
+        update-types: "patch"
+      production-dependencies:
+        dependency-type: "production"
+        update-types: "patch"
     reviewers:
       - "blwatkins"
       - "azurepolarbear"
