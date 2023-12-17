@@ -18,10 +18,16 @@ updates:
     groups:
       development-dependencies:
         dependency-type: "development"
-        update-types: "patch"
+        update-types:
+        - "major"
+        - "minor"
+        - "patch"
       production-dependencies:
         dependency-type: "production"
-        update-types: "patch"
+        update-types:
+        - "major"
+        - "minor"
+        - "patch"
     reviewers:
       - "blwatkins"
       - "azurepolarbear"
