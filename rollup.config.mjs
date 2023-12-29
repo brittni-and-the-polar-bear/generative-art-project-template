@@ -33,7 +33,7 @@ export default {
     output: {
         dir: './dist',
         format: 'umd',
-        name: 'GenerativeArtTemplate',
+        name: 'ColorSchemeExplorer',
         sourcemap: true,
         preserveModules: false
     },
@@ -54,7 +54,7 @@ export default {
             output: 'bundle.css'
         }),
         html({
-            title: 'Generative Art Template',
+            title: 'Color Scheme Explorer',
             publicPath: './'
         }),
         analyzer({
