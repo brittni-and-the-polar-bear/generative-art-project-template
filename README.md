@@ -1,5 +1,11 @@
 # Color Scheme Explorer
 
+----
+
+[![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml)
+
+----
+
 Copyright (C) 2023 Brittni Watkins
 
 A project for creating and testing new color schemes for generative art projects.
