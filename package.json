@@ -5,8 +5,8 @@
   "main": "sketch.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -r out zip; rollup --config",
-    "dev": "rm -r out zip; rollup --config --watch"
+    "build": "rm -r ./dist ./zip; rollup --config",
+    "dev": "rm -r ./dist ./zip; rollup --config --watch"
   },
   "repository": {
     "type": "git",

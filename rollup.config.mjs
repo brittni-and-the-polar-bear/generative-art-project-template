@@ -29,9 +29,9 @@ import zip from 'rollup-plugin-zip';
 import { readFileSync } from 'node:fs';
 
 export default {
-    input: 'src/sketch.ts',
+    input: './src/sketch.ts',
     output: {
-        dir: 'out',
+        dir: './dist',
         format: 'umd',
         name: 'GenerativeArtTemplate',
         sourcemap: true,
@@ -44,7 +44,7 @@ export default {
             extensions: ['.ts']
         }),
         eslint({
-            include: ['src/**/*.ts'],
+            include: ['./src/**/*.ts'],
             throwOnError: true,
             throwOnWarning: true
         }),
@@ -61,12 +61,12 @@ export default {
             summaryOnly: true
         }),
         dev({
-            dirs: ['out'],
+            dirs: ['./dist'],
             host: '127.0.0.1',
             spa: true
         }),
         zip({
-            dir: 'zip'
+            dir: './zip'
         })
     ]
 };

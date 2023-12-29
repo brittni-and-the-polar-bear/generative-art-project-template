@@ -1,14 +1,33 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    /* Language and Environment */
+    "target": "es6",
+
+    /* Modules */
+    "module": "es6",
     "moduleResolution": "node",
-    "noImplicitAny": true,
-    "removeComments": false,
-    "isolatedModules": true,
-    "preserveConstEnums": true,
-    "esModuleInterop": true,
+    "rootDir": "./src",
+
+    /* Emit */
+    "outDir": "./dist",
     "sourceMap": true,
-    "outDir": "out"
-  },
-  "include": ["src/**/*.ts"]
+    "removeComments": true,
+    "noEmitOnError": true,
+    "preserveConstEnums": true,
+
+    /* Interop Constraints */
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "allowUnreachableCode": false
+  }
 }
