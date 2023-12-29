@@ -1,5 +1,11 @@
 # Generative Art Project Template (TypeScript)
 
+----
+
+[![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml)
+
+----
+
 Copyright (C) 2023 Brittni Watkins
 
 A template for new brittni and the polar bear generative art projects using [TypeScript](https://www.typescriptlang.org/) with [p5](https://p5js.org/).
