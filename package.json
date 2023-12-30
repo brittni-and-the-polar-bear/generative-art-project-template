@@ -5,15 +5,15 @@
   "main": "./src/sketch.ts",
   "scripts": {
     "test:lint": "npx eslint ./tests",
-    "test:build": "echo '(1/3): Removing old output'; rm -r ./dist ./zip ./tests-coverage; echo '(2/3): Building project'; rollup --config; echo '(3/3): Starting tests'; npx jest",
-    "test": "echo '(1/1): Starting tests'; npx jest",
+    "test:build:start": "echo '(1/3): Removing old output'; sh ./scripts/delete-out.sh; echo '(2/3): Building project'; rollup --config; echo '(3/3): Starting tests'; npx jest",
+    "test": "echo '(1/2): Removing old test-coverage output'; sh ./scripts/delete-tests-coverage.sh; echo '(2/2): Starting tests'; npx jest",
 
-    "build": "echo '(1/2): Removing old output'; rm -r ./dist ./zip; echo '(2/2): Building project'; rollup --config",
+    "build": "echo '(1/2): Removing old output'; sh ./scripts/delete-out.sh; echo '(2/2): Building project'; rollup --config",
 
-    "start": "echo '(1/2): Removing old output'; rm -r ./dist ./zip; echo '(2/2): Building project and starting development server'; rollup --config --watch",
+    "start": "echo '(1/2): Removing old output'; sh ./scripts/delete-out.sh; echo '(2/2): Building project and starting development server'; rollup --config --watch",
 
     "example:color-grid:build": "sh ./scripts/color-grid.sh",
-    "example:color-grid:run": "sh ./scripts/color-grid.sh -d true"
+    "example:color-grid:start": "sh ./scripts/color-grid.sh -d true"
   },
   "repository": {
     "type": "git",

@@ -19,11 +19,12 @@ import type { JestConfigWithTsJest } from 'ts-jest';
 
 const config: JestConfigWithTsJest = {
     collectCoverage: true,
-    coverageDirectory: './tests-coverage',
+    coverageDirectory: './out/tests-coverage',
     coverageReporters: ['text', 'lcov'],
     errorOnDeprecated: true,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'mjs', 'cjs', 'json', 'node'],
     moduleNameMapper: {
+        '^assets': '<rootDir>/assets',
         '^color$': '<rootDir>/src/common/color',
         '^color/factory$': '<rootDir>/src/common/color/factory',
         '^p5-lib$': '<rootDir>/src/common/p5',

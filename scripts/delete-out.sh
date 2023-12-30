@@ -15,25 +15,13 @@
 # See the GNU Affero General Public License for more details.
 #
 
-while getopts d: flag
-do
-  case "${flag}" in
-    d) dev=${OPTARG};;
-    *) dev="false";;
-  esac
-done
 
-echo 'Starting the /examples/color/color-grid.ts example.';
+echo 'Removing all output files.'
 
-echo '(1/2): Removing old output';
+sh ./scripts/delete-dist.sh;
+sh ./scripts/delete-zip.sh;
+sh ./scripts/delete-tests-coverage.sh;
 
-sh ./scripts/delete-out.sh
+echo 'Removing /out';
 
-if [ "$dev" == "true" ]
-then
-  echo '(2/2): Building project and starting development server';
-  rollup --config --input ./examples/color/color-grid.ts --watch;
-else
-  echo '(2/2): Building project';
-  rollup --config --input ./examples/color/color-grid.ts;
-fi
+rm -r ./out;

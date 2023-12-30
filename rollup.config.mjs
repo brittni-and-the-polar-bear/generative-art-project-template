@@ -31,7 +31,7 @@ import { readFileSync } from 'node:fs';
 export default {
     input: './src/sketch.ts',
     output: {
-        dir: './dist',
+        dir: './out/dist',
         format: 'umd',
         name: 'GenerativeArtTemplate',
         sourcemap: true,
@@ -61,12 +61,12 @@ export default {
             summaryOnly: true
         }),
         dev({
-            dirs: ['./dist'],
+            dirs: ['./out/dist'],
             host: '127.0.0.1',
             spa: true
         }),
         zip({
-            dir: './zip'
+            dir: './out/zip'
         })
     ]
 };

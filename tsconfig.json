@@ -23,7 +23,7 @@
     ],
 
     /* Emit */
-    "outDir": "./dist",
+    "outDir": "./out/dist",
     "sourceMap": true,
     "removeComments": true,
     "noEmitOnError": true,
