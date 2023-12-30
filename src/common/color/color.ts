@@ -15,15 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import PLib from 'p5';
+import { P5Dependant, P5Lib } from "p5-lib";
 
-class Color {
+type P5Color = P5Lib.Color;
+
+class Color extends P5Dependant {
     private _red: number;
     private _green: number;
     private _blue: number;
     private _alpha: number;
 
-    constructor(private readonly _p5: PLib, color?: PLib.Color) {
+    public constructor(p5: P5Lib, color?: P5Color) {
+        super(p5);
         this._red = 0;
         this._green = 0;
         this._blue = 0;
@@ -34,11 +37,11 @@ class Color {
         }
     }
 
-    public get color(): PLib.Color {
+    public get color(): P5Color {
         return this.p5.color(this.red, this.green, this.blue, this.alpha);
     }
 
-    public set color(c: PLib.Color) {
+    public set color(c: P5Color) {
         this.setColorValues(c);
     }
 
@@ -74,16 +77,13 @@ class Color {
         this._alpha = Math.floor(this.p5.constrain(a, 0, 255));
     }
 
-    private setColorValues(color: PLib.Color): void {
+    private setColorValues(color: P5Color): void {
         this.red = this.p5.red(color);
         this.green = this.p5.green(color);
         this.blue = this.p5.blue(color);
         this.alpha = this.p5.alpha(color);
     }
-
-    private get p5(): PLib {
-        return this._p5;
-    }
 }
 
+export { Color };
 export default Color;

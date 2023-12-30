@@ -15,13 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color } from "color";
+export { type ColorFactory } from "./color-factory";
+export { type RandomColorFactory } from "./random-color-factory";
+export { type MappingColorFactory } from "./mapping-color-factory";
 
-import ColorFactory from "./color-factory";
-
-interface RandomColorFactory extends ColorFactory {
-    getRandomColor(): Color;
-}
-
-export { type RandomColorFactory };
-export default RandomColorFactory;
+export * from "./rgb";

@@ -15,13 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color } from "color";
-
-import ColorFactory from "./color-factory";
-
-interface RandomColorFactory extends ColorFactory {
-    getRandomColor(): Color;
+function randomFloat(min: number, max: number): number {
+    return (Math.random() * (max - min)) + min;
 }
 
-export { type RandomColorFactory };
-export default RandomColorFactory;
+function randomInt(min: number, max: number): number {
+    const r: number = randomFloat(min, max);
+    return Math.floor(r);
+}
+
+function randomBoolean(): boolean {
+    const r = randomInt(0, 2);
+    let result: boolean = true;
+
+    if (r % 2 === 0) {
+        result = false;
+    }
+
+    return result;
+}
+
+export { randomFloat, randomInt, randomBoolean };

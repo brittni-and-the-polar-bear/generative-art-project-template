@@ -15,13 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color } from "color";
+import P5Lib from "p5";
 
-import ColorFactory from "./color-factory";
-
-interface RandomColorFactory extends ColorFactory {
-    getRandomColor(): Color;
-}
-
-export { type RandomColorFactory };
-export default RandomColorFactory;
+export { P5Lib };
+export * from "./p5-dependant";

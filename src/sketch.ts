@@ -15,13 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import PLib from 'p5';
-
-import Color from "./common/color/color";
+import { P5Lib, Color } from "./common";
 
 import '../assets/styles/sketch.css';
 
-function sketch(p5: PLib): void {
+function sketch(p5: P5Lib): void {
     p5.setup = (): void => {
         p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
     }
@@ -44,4 +42,4 @@ function sketch(p5: PLib): void {
     }
 }
 
-new PLib(sketch);
+new P5Lib(sketch);

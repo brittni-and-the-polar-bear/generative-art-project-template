@@ -15,11 +15,13 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import { Color } from "color";
+
 import ColorFactory from "./color-factory";
-import Color from "../color";
 
 interface MappingColorFactory extends ColorFactory {
     mapColor(value: number, minValue: number, maxValue: number, saturation: number, brightness: number): Color;
 }
 
+export { type MappingColorFactory };
 export default MappingColorFactory;

@@ -19,4 +19,5 @@ interface ColorFactory {
     get name(): string;
 }
 
+export { type ColorFactory };
 export default ColorFactory;

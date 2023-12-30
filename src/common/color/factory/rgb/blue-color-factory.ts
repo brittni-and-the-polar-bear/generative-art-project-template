@@ -15,13 +15,19 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color } from "color";
+import { P5Lib } from "p5-lib";
+import { Range } from "range";
 
-import ColorFactory from "./color-factory";
+import RGBRangeFactory from "./rgb-range-factory";
 
-interface RandomColorFactory extends ColorFactory {
-    getRandomColor(): Color;
+class BlueColorFactory extends RGBRangeFactory {
+    public constructor(p5: P5Lib) {
+        const redRange: Range = new Range(0, 100);
+        const greenRange: Range = new Range(0, 100);
+        const blueRange: Range = new Range(100, 255);
+        super(p5, 'blue color factory', redRange, greenRange, blueRange);
+    }
 }
 
-export { type RandomColorFactory };
-export default RandomColorFactory;
+export { BlueColorFactory };
+export default BlueColorFactory;

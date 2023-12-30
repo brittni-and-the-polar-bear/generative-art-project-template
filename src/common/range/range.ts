@@ -15,13 +15,19 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color } from "color";
+class Range {
+    public constructor(private readonly _low: number,
+                       private readonly _high: number) {
+    }
 
-import ColorFactory from "./color-factory";
+    public get low(): number {
+        return this._low;
+    }
 
-interface RandomColorFactory extends ColorFactory {
-    getRandomColor(): Color;
+    public get high(): number {
+        return this._high;
+    }
 }
 
-export { type RandomColorFactory };
-export default RandomColorFactory;
+export { Range };
+export default Range;

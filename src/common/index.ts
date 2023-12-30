@@ -15,18 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-class Range {
-    constructor(private readonly _low: number,
-                private readonly _high: number) {
-    }
-
-    get low(): number {
-        return this._low;
-    }
-
-    get high(): number {
-        return this._high;
-    }
-}
-
-export default Range;
+export * from "color";
+export * from "color/factory";
+export * from "p5-lib";
+export * from "random";
+export * from "range";
