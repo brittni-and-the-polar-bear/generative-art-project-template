@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { P5Lib, Color } from "./common";
+import { P5Lib, Color } from "common";
 
 import '../assets/styles/sketch.css';
 

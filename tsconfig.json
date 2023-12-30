@@ -5,6 +5,7 @@
     "paths": {
       "color": ["./src/common/color"],
       "color/factory": ["./src/common/color/factory"],
+      "common": ["./src/common"],
       "p5-lib": ["./src/common/p5"],
       "random": ["./src/common/random"],
       "range": ["./src/common/range"]

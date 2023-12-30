@@ -6,7 +6,8 @@
   "scripts": {
     "lint-tests": "npx eslint ./tests",
 
-    "test": "echo '(1/3): Removing old output'; rm -r ./dist ./zip ./tests-coverage; echo '(2/3): Building project'; rollup --config; echo '(3/3): Starting tests'; npx jest",
+    "build-and-test": "echo '(1/3): Removing old output'; rm -r ./dist ./zip ./tests-coverage; echo '(2/3): Building project'; rollup --config; echo '(3/3): Starting tests'; npx jest",
+    "test": "echo '(1/1): Starting tests'; npx jest",
 
     "build": "echo '(1/2): Removing old output'; rm -r ./dist ./zip; echo '(2/2): Building project'; rollup --config",
 

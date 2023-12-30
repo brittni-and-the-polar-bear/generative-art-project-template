@@ -15,17 +15,25 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import type { Config } from 'jest';
+import type { JestConfigWithTsJest } from 'ts-jest';
 
-const config: Config = {
+const config: JestConfigWithTsJest = {
     collectCoverage: true,
     coverageDirectory: './tests-coverage',
     coverageReporters: ['text', 'lcov'],
     errorOnDeprecated: true,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'mjs', 'cjs', 'json', 'node'],
+    moduleNameMapper: {
+        '^color$': '<rootDir>/src/common/color',
+        '^color/factory$': '<rootDir>/src/common/color/factory',
+        '^p5-lib$': '<rootDir>/src/common/p5',
+        '^random$': '<rootDir>/src/common/random',
+        '^range$': '<rootDir>/src/common/range',
+        '^common$': '<rootDir>/src/common'
+    },
     testEnvironment: 'jsdom',
     testRegex: '/tests/.*\\.(test|spec)?\\.(ts|tsx)$',
-    transform: {'^.+\\.ts?$': 'ts-jest'},
+    transform: {'^.+\\.(ts|tsx)$': 'ts-jest'},
     verbose: true
 };
 

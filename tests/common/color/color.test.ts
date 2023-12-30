@@ -15,11 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import Color from "../../../src/common/color/color";
-import PLib from "p5";
+import { P5Lib, Color } from "common";
 
 describe('color tests', (): void => {
-    const p5: PLib = new PLib((): void => { return; });
+    const p5: P5Lib = new P5Lib((): void => { return; });
 
     test('default color', (): void => {
         const defaultColor: Color = new Color(p5);
@@ -33,7 +32,7 @@ describe('color tests', (): void => {
         const r: number = 255;
         const g: number = 47;
         const b: number = 165;
-        const c: PLib.Color = p5.color(r, g, b);
+        const c: P5Lib.Color = p5.color(r, g, b);
         const color: Color = new Color(p5, c);
         expect(color.red).toBe(r);
         expect(color.green).toBe(g);
@@ -41,78 +40,33 @@ describe('color tests', (): void => {
         expect(color.alpha).toBe(255);
     });
 
-    test('color built with (r,g,b,a) parameter', (): void => {
-       // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('color built with (r,g,b,a) parameter');
 
-    test('color built with (c) parameter', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('color built with (c) parameter');
 
-    test('color built with (c,a) parameter', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('color built with (c,a) parameter');
 
-    test('color set with (r,g,b) color', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('color set with (r,g,b) color');
 
-    test('color set with (r,g,b,a) color', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('color set with (r,g,b,a) color');
 
-    test('color set with (c) parameter', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('color set with (c) parameter');
 
-    test('color set with (c,a) parameter', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('color set with (c,a) parameter');
 
-    test('set red to value > 255', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('set red to value > 255');
 
-    test('set red to value < 0', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('set red to value < 0');
 
-    test('set green to value > 255', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('set green to value > 255');
 
-    test('set green to value < 0', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('set green to value < 0');
 
-    test('set blue to value > 255', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('set blue to value > 255');
 
-    test('set blue to value < 0', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('set blue to value < 0');
 
-    test('set alpha to value > 255', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('set alpha to value > 255');
 
-    test('set alpha to value < 0', (): void => {
-        // TODO
-        expect(true).toBe(false); // automatic failure
-    });
+    test.todo('set alpha to value < 0');
 });
