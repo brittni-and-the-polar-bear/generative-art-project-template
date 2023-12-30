@@ -8,5 +8,8 @@ package-lock.json
 dist/
 zip/
 
+# jest
+tests-coverage/
+
 # WebStorm
 .idea/
