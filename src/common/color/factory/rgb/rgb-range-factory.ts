@@ -44,13 +44,13 @@ abstract class RGBRangeFactory extends P5Dependant implements RandomColorFactory
 
     public getRandomColor(): Color {
         this.p5.colorMode(this.p5.RGB, 255);
-        let color: Color = new Color(this.p5);
+        let color: Color = new Color();
 
         if (this.redRange && this.greenRange && this.blueRange) {
             const r: number = randomInt(this.redRange.low, this.redRange.high);
             const g: number = randomInt(this.greenRange.low, this.greenRange.high);
             const b: number = randomInt(this.blueRange.low, this.blueRange.high);
-            color = new Color(this.p5, this.p5.color(r, g, b));
+            color = new Color(this.p5.color(r, g, b));
         }
 
         return color;

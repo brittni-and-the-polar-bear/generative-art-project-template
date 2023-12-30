@@ -15,18 +15,20 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { P5Dependant, P5Lib } from "p5-lib";
+import { P5Lib } from "p5-lib";
+import { SketchContext } from "p5-lib";
 
 type P5Color = P5Lib.Color;
 
-class Color extends P5Dependant {
-    private _red: number;
-    private _green: number;
-    private _blue: number;
-    private _alpha: number;
+const p5: P5Lib = SketchContext.p5;
 
-    public constructor(p5: P5Lib, color?: P5Color) {
-        super(p5);
+class Color {
+    private _red: number; // 0-255
+    private _green: number; // 0-255
+    private _blue: number; // 0-255
+    private _alpha: number; // 0-255
+
+    public constructor(color?: P5Color) {
         this._red = 0;
         this._green = 0;
         this._blue = 0;
@@ -37,8 +39,41 @@ class Color extends P5Dependant {
         }
     }
 
+    /**
+     * @param h some number between 0 and 360.
+     * @param s some number between 0 and 100.
+     * @param l some number between 0 and 100.
+     * @param a (optional) some number between 0 and 1.
+     */
+    public static getHSLColor(h: number, s: number, l: number, a?: number): P5Color {
+        let color: P5Color;
+        h = Math.floor(p5.constrain(h, 0, 360));
+        s = Math.floor(p5.constrain(s, 0, 100));
+        l = Math.floor(p5.constrain(l, 0, 100));
+
+        if (a) {
+            a = p5.constrain(a, 0, 1);
+            color = p5.color(`hsla(${h}, ${s}%, ${l}%, ${a})`);
+        } else {
+            color = p5.color(`hsl(${h}, ${s}%, ${l}%)`);
+        }
+
+        return color;
+    }
+
+    /**
+     * @param h some number between 0 and 360.
+     * @param s some number between 0 and 100.
+     * @param l some number between 0 and 100.
+     * @param a some number between 0 and 1.
+     */
+    public static getHSLAColor(h: number, s: number, l: number, a: number): P5Color {
+        return Color.getHSLColor(h, s, l, a);
+    }
+
     public get color(): P5Color {
-        return this.p5.color(this.red, this.green, this.blue, this.alpha);
+        p5.colorMode(p5.RGB);
+        return p5.color(this.red, this.green, this.blue, this.alpha);
     }
 
     public set color(c: P5Color) {
@@ -50,7 +85,7 @@ class Color extends P5Dependant {
     }
 
     public set red(r: number) {
-        this._red = Math.floor(this.p5.constrain(r, 0, 255));
+        this._red = Math.floor(p5.constrain(r, 0, 255));
     }
 
     public get green(): number {
@@ -58,7 +93,7 @@ class Color extends P5Dependant {
     }
 
     public set green(g: number) {
-        this._green = Math.floor(this.p5.constrain(g, 0, 255));
+        this._green = Math.floor(p5.constrain(g, 0, 255));
     }
 
     public get blue(): number {
@@ -66,7 +101,7 @@ class Color extends P5Dependant {
     }
 
     public set blue(b: number) {
-        this._blue = Math.floor(this.p5.constrain(b, 0, 255));
+        this._blue = Math.floor(p5.constrain(b, 0, 255));
     }
 
     public get alpha(): number {
@@ -74,14 +109,14 @@ class Color extends P5Dependant {
     }
 
     public set alpha(a: number) {
-        this._alpha = Math.floor(this.p5.constrain(a, 0, 255));
+        this._alpha = Math.floor(p5.constrain(a, 0, 255));
     }
 
     private setColorValues(color: P5Color): void {
-        this.red = this.p5.red(color);
-        this.green = this.p5.green(color);
-        this.blue = this.p5.blue(color);
-        this.alpha = this.p5.alpha(color);
+        this.red = p5.red(color);
+        this.green = p5.green(color);
+        this.blue = p5.blue(color);
+        this.alpha = p5.alpha(color);
     }
 }
 

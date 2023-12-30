@@ -22,11 +22,11 @@ sketch.draw = (): void => {
     sketch.background(0, 255, 255);
     sketch.rectMode(sketch.CENTER);
 
-    const colorA: Color = new Color(sketch, sketch.color(255));
+    const colorA: Color = new Color(sketch.color(255));
     sketch.fill(colorA.color);
     sketch.rect(0, 0, 250, 250);
 
-    const colorB: Color = new Color(sketch);
+    const colorB: Color = new Color();
     sketch.fill(colorB.color);
     sketch.rect(0, 0, 75, 75);
 }

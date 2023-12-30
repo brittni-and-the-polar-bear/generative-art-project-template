@@ -15,34 +15,27 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {P5Lib, Color, SketchContext} from "common";
+import P5Lib from "p5";
 
-import '../assets/styles/sketch.css';
+const noP5: P5Lib = new P5Lib((p: P5Lib): void => {
+    p.setup = (): void => {
+        p.createCanvas(0, 0);
+    }
+});
 
-function sketch(p5: P5Lib): void {
-    p5.setup = (): void => {
-        p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
-        SketchContext.initialize(p5);
+class SketchContext {
+    private static _p5?: P5Lib;
+
+    public static initialize(p5: P5Lib): void {
+        if (!this._p5) {
+            this._p5 = p5;
+        }
     }
 
-    p5.draw = () : void => {
-        p5.background(0, 0, 255);
-        p5.rectMode(p5.CENTER);
-
-        const colorA: Color = new Color(p5.color(255, 0, 255));
-        p5.fill(colorA.color);
-        p5.rect(0, 0, 250, 250);
-
-        const colorB: Color = new Color();
-        p5.fill(colorB.color);
-        p5.rect(0, 0, 75, 75);
-    }
-
-    p5.windowResized = () : void => {
-        p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+    public static get p5(): P5Lib {
+        return this._p5 ?? noP5;
     }
 }
 
-const p5: P5Lib = new P5Lib(sketch);
-
-export { p5 as sketch };
+export { SketchContext };
+export default SketchContext;

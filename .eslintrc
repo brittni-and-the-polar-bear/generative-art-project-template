@@ -29,6 +29,8 @@
     "no-empty-function": "off",
     "@typescript-eslint/no-empty-function": "error",
 
+    "@typescript-eslint/no-extraneous-class": ["error", { "allowStaticOnly": true }],
+
     "no-extra-semi": "off",
     "@typescript-eslint/no-extra-semi": "error",
 

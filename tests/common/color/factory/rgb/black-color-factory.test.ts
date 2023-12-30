@@ -40,15 +40,6 @@ function repeatTest(count: number, testName: string ,givenTest: () => void): voi
 describe('back color factory tests', (): void => {
     const p5: P5Lib = new P5Lib((): void => { return; });
 
-    test('get random black color', (): void => {
-        const factory: BlackColorFactory = new BlackColorFactory(p5);
-        const color:Color = factory.getRandomColor();
-        checkValueBetween(color.red, 0, 100);
-        checkValueBetween(color.green, 0, 100);
-        checkValueBetween(color.blue, 0, 100);
-        expect(color.alpha).toBe(255);
-    });
-
     const testRandomBlackColor = (): void => {
         const factory: BlackColorFactory = new BlackColorFactory(p5);
         const color:Color = factory.getRandomColor();

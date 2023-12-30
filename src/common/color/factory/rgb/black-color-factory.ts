@@ -29,7 +29,7 @@ class BlackColorFactory extends RGBRangeFactory {
     public override getRandomColor(): Color {
         this.p5.colorMode(this.p5.RGB, 255);
         const gray: number = randomInt(0, 100);
-        return new Color(this.p5, this.p5.color(gray));
+        return new Color(this.p5.color(gray));
     }
 }
 
