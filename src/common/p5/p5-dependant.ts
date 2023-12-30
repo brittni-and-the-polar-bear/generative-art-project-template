@@ -17,6 +17,9 @@
 
 import P5Lib from "p5";
 
+/**
+ * @deprecated
+ */
 abstract class P5Dependant {
     protected constructor(private readonly _p5: P5Lib) {
     }

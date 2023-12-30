@@ -44,7 +44,10 @@ export default {
             extensions: ['.ts']
         }),
         eslint({
-            include: ['./src/**/*.ts'],
+            include: [
+                './src/**/*.ts',
+                './examples/**/*.ts'
+            ],
             throwOnError: true,
             throwOnWarning: true
         }),
