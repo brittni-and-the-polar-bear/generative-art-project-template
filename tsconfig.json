@@ -1,14 +1,47 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    /* Language and Environment */
+    "target": "es6",
+    "paths": {
+      "assets": ["./assets"],
+      "color": ["./src/common/color"],
+      "color/factory": ["./src/common/color/factory"],
+      "common": ["./src/common"],
+      "p5-lib": ["./src/common/p5"],
+      "random": ["./src/common/random"],
+      "range": ["./src/common/range"],
+      "sketch": ["./src/sketch"]
+    },
+
+    /* Modules */
+    "module": "es6",
     "moduleResolution": "node",
-    "noImplicitAny": true,
-    "removeComments": false,
-    "isolatedModules": true,
-    "preserveConstEnums": true,
-    "esModuleInterop": true,
+    "rootDirs": [
+      "./src",
+      "./tests",
+      "./examples"
+    ],
+
+    /* Emit */
+    "outDir": "./out/dist",
     "sourceMap": true,
-    "outDir": "out"
-  },
-  "include": ["src/**/*.ts"]
+    "removeComments": true,
+    "noEmitOnError": true,
+    "preserveConstEnums": true,
+
+    /* Interop Constraints */
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "allowUnreachableCode": false
+  }
 }

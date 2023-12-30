@@ -6,7 +6,11 @@ package-lock.json
 
 # generated files
 out/
+dist/
 zip/
+
+# jest
+tests-coverage/
 
 # WebStorm
 .idea/

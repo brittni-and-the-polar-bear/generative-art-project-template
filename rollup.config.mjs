@@ -16,22 +16,22 @@
  */
 
 import typescript from '@rollup/plugin-typescript';
-import commonjs from "@rollup/plugin-commonjs";
-import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from '@rollup/plugin-commonjs';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import eslint from '@rollup/plugin-eslint';
 import terser from '@rollup/plugin-terser';
 import css from 'rollup-plugin-css-only';
 import html from '@rollup/plugin-html';
-import analyzer from "rollup-plugin-analyzer";
+import analyzer from 'rollup-plugin-analyzer';
 import dev from 'rollup-plugin-dev';
 import zip from 'rollup-plugin-zip';
 
 import { readFileSync } from 'node:fs';
 
 export default {
-    input: 'src/sketch.ts',
+    input: './src/sketch.ts',
     output: {
-        dir: 'out',
+        dir: './out/dist',
         format: 'umd',
         name: 'GenerativeArtTemplate',
         sourcemap: true,
@@ -44,7 +44,7 @@ export default {
             extensions: ['.ts']
         }),
         eslint({
-            include: ['src/**/*.ts'],
+            include: ['./src/**/*.ts'],
             throwOnError: true,
             throwOnWarning: true
         }),
@@ -61,12 +61,12 @@ export default {
             summaryOnly: true
         }),
         dev({
-            dirs: ['out'],
+            dirs: ['./out/dist'],
             host: '127.0.0.1',
             spa: true
         }),
         zip({
-            dir: 'zip'
+            dir: './out/zip'
         })
     ]
 };

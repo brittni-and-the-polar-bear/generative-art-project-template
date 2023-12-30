@@ -15,33 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { P5Lib, Color } from "common";
-
-import '../assets/styles/sketch.css';
-
-function sketch(p5: P5Lib): void {
-    p5.setup = (): void => {
-        p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
-    }
-
-    p5.draw = () : void => {
-        p5.background(0, 0, 255);
-        p5.rectMode(p5.CENTER);
-
-        const colorA: Color = new Color(p5, p5.color(255, 0, 255));
-        p5.fill(colorA.color);
-        p5.rect(0, 0, 250, 250);
-
-        const colorB: Color = new Color(p5);
-        p5.fill(colorB.color);
-        p5.rect(0, 0, 75, 75);
-    }
-
-    p5.windowResized = () : void => {
-        p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
-    }
+function randomFloat(min: number, max: number): number {
+    return (Math.random() * (max - min)) + min;
 }
 
-const p5: P5Lib = new P5Lib(sketch);
+function randomInt(min: number, max: number): number {
+    const r: number = randomFloat(min, max);
+    return Math.floor(r);
+}
 
-export { p5 as sketch };
+function randomBoolean(): boolean {
+    const r = randomInt(0, 2);
+    let result: boolean = true;
+
+    if (r % 2 === 0) {
+        result = false;
+    }
+
+    return result;
+}
+
+export { randomFloat, randomInt, randomBoolean };

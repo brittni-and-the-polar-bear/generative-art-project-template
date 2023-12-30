@@ -15,33 +15,19 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { P5Lib, Color } from "common";
+import { P5Lib } from "p5-lib";
+import { Range } from "range";
 
-import '../assets/styles/sketch.css';
+import RGBRangeFactory from "./rgb-range-factory";
 
-function sketch(p5: P5Lib): void {
-    p5.setup = (): void => {
-        p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
-    }
-
-    p5.draw = () : void => {
-        p5.background(0, 0, 255);
-        p5.rectMode(p5.CENTER);
-
-        const colorA: Color = new Color(p5, p5.color(255, 0, 255));
-        p5.fill(colorA.color);
-        p5.rect(0, 0, 250, 250);
-
-        const colorB: Color = new Color(p5);
-        p5.fill(colorB.color);
-        p5.rect(0, 0, 75, 75);
-    }
-
-    p5.windowResized = () : void => {
-        p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+class BlueColorFactory extends RGBRangeFactory {
+    public constructor(p5: P5Lib) {
+        const redRange: Range = new Range(0, 100);
+        const greenRange: Range = new Range(0, 100);
+        const blueRange: Range = new Range(100, 255);
+        super(p5, 'blue color factory', redRange, greenRange, blueRange);
     }
 }
 
-const p5: P5Lib = new P5Lib(sketch);
-
-export { p5 as sketch };
+export { BlueColorFactory };
+export default BlueColorFactory;
