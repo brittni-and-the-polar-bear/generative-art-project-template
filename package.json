@@ -1,29 +1,29 @@
 {
-  "name": "color-scheme-explorer",
-  "version": "0.0.0",
-  "description": "A project for creating and testing new color schemes for generative art projects.",
-  "main": "sketch.ts",
+  "name": "generative-art-project-template",
+  "version": "0.1.0",
+  "description": "A template for new brittni and the polar bear generative art projects using TypeScript with p5",
+  "main": "./src/sketch.ts",
   "scripts": {
-    "lint-tests": "npx eslint ./tests",
-
-    "build-and-test": "echo '(1/3): Removing old output'; rm -r ./dist ./zip ./tests-coverage; echo '(2/3): Building project'; rollup --config; echo '(3/3): Starting tests'; npx jest",
+    "test:lint": "npx eslint ./tests",
+    "test:build": "echo '(1/3): Removing old output'; rm -r ./dist ./zip ./tests-coverage; echo '(2/3): Building project'; rollup --config; echo '(3/3): Starting tests'; npx jest",
     "test": "echo '(1/1): Starting tests'; npx jest",
 
     "build": "echo '(1/2): Removing old output'; rm -r ./dist ./zip; echo '(2/2): Building project'; rollup --config",
 
-    "dev": "echo '(1/2): Removing old output'; rm -r ./dist ./zip; echo '(2/2): Building project and starting development server'; rollup --config --watch"
+    "start": "echo '(1/2): Removing old output'; rm -r ./dist ./zip; echo '(2/2): Building project and starting development server'; rollup --config --watch",
+
+    "example:color-grid:build": "sh ./scripts/color-grid.sh",
+    "example:color-grid:run": "sh ./scripts/color-grid.sh -d true"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brittni-and-the-polar-bear/color-scheme-explorer.git"
+    "url": "git+https://github.com/brittni-and-the-polar-bear/generative-art-project-template.git"
   },
   "keywords": [
     "code art",
-    "color",
-    "color schemes",
-    "color palette",
     "generative art",
     "p5",
+    "template",
     "typescript"
   ],
   "author": {
@@ -44,7 +44,7 @@
   "bugs": {
     "url": "https://github.com/brittni-and-the-polar-bear/generative-art-project-template/issues"
   },
-  "homepage": "https://github.com/brittni-and-the-polar-bear/color-scheme-explorer#readme",
+  "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-project-template#readme",
   "dependencies": {
     "@types/p5": "^1.7.6",
     "p5": "^1.9.0",

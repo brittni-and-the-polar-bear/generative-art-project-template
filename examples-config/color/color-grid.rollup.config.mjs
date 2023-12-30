@@ -22,18 +22,16 @@ import eslint from '@rollup/plugin-eslint';
 import terser from '@rollup/plugin-terser';
 import css from 'rollup-plugin-css-only';
 import html from '@rollup/plugin-html';
-import analyzer from 'rollup-plugin-analyzer';
 import dev from 'rollup-plugin-dev';
-import zip from 'rollup-plugin-zip';
 
 import { readFileSync } from 'node:fs';
 
 export default {
-    input: './src/sketch.ts',
+    input: './examples/color/color-grid.ts',
     output: {
         dir: './dist',
         format: 'umd',
-        name: 'GenerativeArtTemplate',
+        name: 'Example:Color-Grid',
         sourcemap: true,
         preserveModules: false
     },
@@ -44,7 +42,10 @@ export default {
             extensions: ['.ts']
         }),
         eslint({
-            include: ['./src/**/*.ts'],
+            include: [
+                './src/**/*.ts',
+                './*.ts'
+            ],
             throwOnError: true,
             throwOnWarning: true
         }),
@@ -54,19 +55,13 @@ export default {
             output: 'bundle.css'
         }),
         html({
-            title: 'Generative Art Template',
+            title: 'Example: Color Grid',
             publicPath: './'
-        }),
-        analyzer({
-            summaryOnly: true
         }),
         dev({
             dirs: ['./dist'],
             host: '127.0.0.1',
             spa: true
-        }),
-        zip({
-            dir: './zip'
         })
     ]
 };
