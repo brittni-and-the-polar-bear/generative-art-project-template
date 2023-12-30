@@ -15,22 +15,33 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import P5 from 'p5';
+import PLib from 'p5';
+
+import Color from "./common/color/color";
 
 import '../assets/styles/sketch.css';
 
-function sketch(p: P5): void {
-    p.setup = (): void => {
-        p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
+function sketch(p5: PLib): void {
+    p5.setup = (): void => {
+        p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
     }
 
-    p.draw = () : void => {
-        p.background(0, 0, 255);
+    p5.draw = () : void => {
+        p5.background(0, 0, 255);
+        p5.rectMode(p5.CENTER);
+
+        const colorA: Color = new Color(p5, p5.color(255, 0, 255));
+        p5.fill(colorA.color);
+        p5.rect(0, 0, 250, 250);
+
+        const colorB: Color = new Color(p5);
+        p5.fill(colorB.color);
+        p5.rect(0, 0, 75, 75);
     }
 
-    p.windowResized = () : void => {
-        p.resizeCanvas(p.windowWidth, p.windowHeight);
+    p5.windowResized = () : void => {
+        p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
     }
 }
 
-new P5(sketch);
+new PLib(sketch);
