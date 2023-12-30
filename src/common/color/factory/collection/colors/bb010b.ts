@@ -15,14 +15,16 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color } from "color";
+import CollectionColor from "../collection-color";
 
-interface ColorFactory {
-    get name(): string;
-    get colorCount(): number | undefined;
-
-    getNextColor: () => Color;
+const _bb010b: CollectionColor = {
+    rgb: {r: 187, g: 1, b: 11},
+    hsl: {h: 357, s: 99, l: 37},
+    hexString: '#BB010B',
+    name: "bird's eye",
+    htmlName: 'firebrick',
+    wikipediaName: 'venetian red'
 }
 
-export { type ColorFactory };
-export default ColorFactory;
+export { _bb010b };
+export default _bb010b;

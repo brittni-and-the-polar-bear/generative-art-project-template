@@ -15,14 +15,3 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color } from "color";
-
-interface ColorFactory {
-    get name(): string;
-    get colorCount(): number | undefined;
-
-    getNextColor: () => Color;
-}
-
-export { type ColorFactory };
-export default ColorFactory;

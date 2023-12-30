@@ -15,14 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color } from "color";
+// color names derived from https://colornamer.robertcooper.me/
 
-interface ColorFactory {
-    get name(): string;
-    get colorCount(): number | undefined;
-
-    getNextColor: () => Color;
+type CollectionColor = {
+    rgb: {
+        r: number,
+        g: number,
+        b: number
+    },
+    hsl?: {
+        h: number,
+        s: number,
+        l: number
+    }
+    hexString: string,
+    name?: string,
+    htmlName?: string,
+    wikipediaName?: string
 }
 
-export { type ColorFactory };
-export default ColorFactory;
+export { type CollectionColor };
+export default CollectionColor;

@@ -15,14 +15,16 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color } from "color";
+import CollectionColor from "../collection-color";
 
-interface ColorFactory {
-    get name(): string;
-    get colorCount(): number | undefined;
-
-    getNextColor: () => Color;
+const _cd1624: CollectionColor = {
+    rgb: {r: 205, g: 22, b: 36},
+    hsl: {h: 355, s: 81, l: 45},
+    hexString: '#CD1624',
+    name: 'cartoon violence',
+    htmlName: 'crimson',
+    wikipediaName: 'lava'
 }
 
-export { type ColorFactory };
-export default ColorFactory;
+export { _cd1624 };
+export default _cd1624;

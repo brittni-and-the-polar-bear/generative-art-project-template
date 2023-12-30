@@ -15,14 +15,27 @@
  * See the GNU Affero General Public License for more details.
  */
 
+// import { SketchContext, P5Lib } from "p5-lib";
 import { Color } from "color";
 
-interface ColorFactory {
-    get name(): string;
-    get colorCount(): number | undefined;
+// const p5:P5Lib = SketchContext.p5;
 
-    getNextColor: () => Color;
+class ColorScheme {
+    // private ColorGroup[] groups
+
+    public get size(): number {
+        return 1; // number of groups
+    }
+
+    public getNextColor(): Color {
+        return new Color();
+    }
+
+    public getNextColorFromGroup(index: number): Color {
+        index++;
+        return new Color();
+    }
 }
 
-export { type ColorFactory };
-export default ColorFactory;
+export { ColorScheme };
+export default ColorScheme;

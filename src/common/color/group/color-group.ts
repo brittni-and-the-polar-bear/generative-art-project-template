@@ -17,12 +17,9 @@
 
 import { Color } from "color";
 
-interface ColorFactory {
-    get name(): string;
-    get colorCount(): number | undefined;
-
+interface ColorGroup {
     getNextColor: () => Color;
 }
 
-export { type ColorFactory };
-export default ColorFactory;
+export { type ColorGroup };
+export default ColorGroup;

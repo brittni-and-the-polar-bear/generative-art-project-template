@@ -15,14 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color } from "color";
+// TODO complete color data found at https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8 (mutedChristmas)
+// TODO complete color data found at https://www.color-hex.com/color-palette/96876 (brightChristmas)
+// TODO make hex color search - put all hex strings in a set, search for the given string
 
-interface ColorFactory {
-    get name(): string;
-    get colorCount(): number | undefined;
-
-    getNextColor: () => Color;
-}
-
-export { type ColorFactory };
-export default ColorFactory;
+// TODO Complete https://www.color-hex.com/color-palette/78520
+// TODO Complete https://www.color-hex.com/color-palette/56388
