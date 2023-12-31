@@ -15,24 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// color names derived from https://colornamer.robertcooper.me/
+import { Collection } from 'color/factory/collection';
+import { StringMap } from 'string-map';
 
-type CollectionColor = {
-    rgb: {
-        r: number,
-        g: number,
-        b: number
-    },
-    hsl?: {
-        h: number,
-        s: number,
-        l: number
-    }
-    hexString: string,
-    name?: string,
-    htmlName?: string,
-    wikipediaName?: string
+const holidayCollections: StringMap<Collection> = new StringMap<Collection>();
+
+function addCollection(c: Collection): void {
+    const key: string = c.name;
+    holidayCollections.setUndefinedKey(key, c, `collection ${key} already exists in holidayCollections.`);
 }
 
-export { type CollectionColor };
-export default CollectionColor;
+import { MutedChristmas } from './muted-christmas';
+addCollection(MutedChristmas);
+export { MutedChristmas };
+
+export { holidayCollections }

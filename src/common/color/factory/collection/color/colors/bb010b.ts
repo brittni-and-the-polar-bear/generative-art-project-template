@@ -15,3 +15,16 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import { CollectionColor } from "color/factory/collection";
+
+const _bb010b: CollectionColor = {
+    rgb: {r: 187, g: 1, b: 11},
+    hsl: {h: 357, s: 99, l: 37},
+    hexString: '#BB010B',
+    name: "bird's eye",
+    htmlName: 'firebrick',
+    wikipediaName: 'venetian red'
+}
+
+export { _bb010b };
+export default _bb010b;

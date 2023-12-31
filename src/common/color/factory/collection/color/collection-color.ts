@@ -15,16 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import CollectionColor from "../collection-color";
+// color names derived from https://colornamer.robertcooper.me/
 
-const _bb010b: CollectionColor = {
-    rgb: {r: 187, g: 1, b: 11},
-    hsl: {h: 357, s: 99, l: 37},
-    hexString: '#BB010B',
-    name: "bird's eye",
-    htmlName: 'firebrick',
-    wikipediaName: 'venetian red'
-}
+type CollectionColor = {
+    rgb: {
+        r: number,
+        g: number,
+        b: number
+    },
+    hsl?: {
+        h: number,
+        s: number,
+        l: number
+    }
+    hexString: string,
+    name?: string,
+    htmlName?: string,
+    wikipediaName?: string
+};
 
-export { _bb010b };
-export default _bb010b;
+export { type CollectionColor };
+export default CollectionColor;
