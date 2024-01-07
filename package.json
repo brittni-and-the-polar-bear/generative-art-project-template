@@ -11,9 +11,14 @@
     "build": "echo '(1/2): Removing old output'; sh ./scripts/delete-out.sh; echo '(2/2): Building project'; rollup --config",
 
     "start": "echo '(1/2): Removing old output'; sh ./scripts/delete-out.sh; echo '(2/2): Building project and starting development server'; rollup --config --watch",
-
-    "example:color-grid:build": "sh ./scripts/color-grid.sh",
-    "example:color-grid:start": "sh ./scripts/color-grid.sh -d true"
+    "example:color-grid:build": "sh ./scripts/rollup.sh -p ./examples/color/color-grid.ts -d false",
+    "example:color-grid:start": "sh ./scripts/rollup.sh -p ./examples/color/color-grid.ts -d true",
+    "example:100-days:build": "sh ./scripts/rollup.sh -p projects/100-days/100-days-progress.ts -d false",
+    "example:100-days:start": "sh ./scripts/rollup.sh -p projects/100-days/100-days-progress.ts -d true",
+    "project:genuary-1:build": "sh ./scripts/rollup.sh -p ./projects/genuary-2024/1-particles-lots-of-them/sketch.ts -d false",
+    "project:genuary-1:start": "sh ./scripts/rollup.sh -p ./projects/genuary-2024/1-particles-lots-of-them/sketch.ts -d true",
+    "project:genuary-2:build": "sh ./scripts/rollup.sh -p ./projects/genuary-2024/2-no-palettes/sketch.ts -d false",
+    "project:genuary-2:start": "sh ./scripts/rollup.sh -p ./projects/genuary-2024/2-no-palettes/sketch.ts -d true"
   },
   "repository": {
     "type": "git",

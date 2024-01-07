@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Brittni Watkins.
+ * Copyright (C) 2023-2024 Brittni Watkins.
  *
  * This file is a part of brittni and the polar bear's Generative Art Project Template,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,18 +15,20 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import { Color } from "color";
-import { SketchContext, P5Lib } from "p5-lib";
-import { randomInt } from "random";
+import {Color} from "color";
+import {P5Lib, SketchContext} from "p5-lib";
+import {randomInt} from "random";
+import {ColorFactory} from "color/factory";
 
-import ColorFactory from "../color-factory";
+import CollectionColor from "./color/collection-color";
+import collectionColor from "./color/collection-color";
 
 const p5: P5Lib = SketchContext.p5;
 
 abstract class CollectionColorFactory implements ColorFactory {
     private _currentIndex: number;
 
-    protected constructor(private readonly _colors: Color[], private readonly _isOrdered: boolean) {
+    protected constructor(private readonly _colors: CollectionColor[], private readonly _isOrdered: boolean) {
         this._currentIndex = 0;
     }
 
@@ -35,7 +37,7 @@ abstract class CollectionColorFactory implements ColorFactory {
     }
 
     public getNextColor(): Color {
-        let color = this.colors[this.currentIndex];
+        const collectionColor: CollectionColor = this.colors[this.currentIndex];
 
         if (this.isOrdered) {
             this.currentIndex = (this.currentIndex + 1) % this.colorCount;
@@ -43,12 +45,18 @@ abstract class CollectionColorFactory implements ColorFactory {
             this.currentIndex = randomInt(0, this.colorCount);
         }
 
-        return color;
+        return this.buildColor(collectionColor);
+    }
+
+    public buildColor(collectionColor: collectionColor): Color {
+        // TODO - test Color constructor and setter with colors made with hexStrings
+        const color: P5Lib.Color = p5.color(collectionColor.hexString);
+        return new Color(color);
     }
 
     public abstract get name(): string;
 
-    private get colors(): Color[] {
+    private get colors(): CollectionColor[] {
         return this._colors;
     }
 

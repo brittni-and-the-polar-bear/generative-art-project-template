@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Brittni Watkins.
+ * Copyright (C) 2023-2024 Brittni Watkins.
  *
  * This file is a part of brittni and the polar bear's Generative Art Project Template,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,12 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// import {CollectionColorFactory} from "color/factory/collection";
-
-// const allCollections: CollectionColorFactory[] = [];
-
-import { Collection } from 'color/factory/collection';
-import { StringMap } from 'string-map';
+import {Collection} from 'color/factory/collection';
+import {StringMap} from 'string-map';
+import {holidayCollections} from './holiday';
 
 const allCollections: StringMap<Collection> = new StringMap<Collection>();
 
@@ -35,7 +32,6 @@ function addCollections(collections: IterableIterator<Collection>): void {
     }
 }
 
-import { holidayCollections } from './holiday';
 addCollections(holidayCollections.values);
 export * from './holiday';
 

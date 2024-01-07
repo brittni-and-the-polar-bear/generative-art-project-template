@@ -10,6 +10,9 @@
       "color/factory": ["./src/common/color/factory"],
       "color/factory/collection": ["./src/common/color/factory/collection"],
       "common": ["./src/common"],
+      "math": [
+        "./src/common/math"
+      ],
       "p5-lib": ["./src/common/p5"],
       "random": ["./src/common/random"],
       "range": ["./src/common/range"],
@@ -23,7 +26,8 @@
     "rootDirs": [
       "./src",
       "./tests",
-      "./examples"
+      "./examples",
+      "./projects"
     ],
 
     /* Emit */

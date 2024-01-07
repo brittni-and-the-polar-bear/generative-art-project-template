@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Brittni Watkins.
+ * Copyright (C) 2023-2024 Brittni Watkins.
  *
  * This file is a part of brittni and the polar bear's Generative Art Project Template,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,16 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import CollectionColor from "../collection-color";
+// TODO - Test Math functions
 
-const _cd1624: CollectionColor = {
-    rgb: {r: 205, g: 22, b: 36},
-    hsl: {h: 355, s: 81, l: 45},
-    hexString: '#CD1624',
-    name: 'cartoon violence',
-    htmlName: 'crimson',
-    wikipediaName: 'lava'
-}
-
-export { _cd1624 };
-export default _cd1624;
+describe('string map tests', (): void => {
+    test.todo('Tests for StringMap');
+});

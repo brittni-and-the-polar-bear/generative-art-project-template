@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Brittni Watkins.
+ * Copyright (C) 2023-2024 Brittni Watkins.
  *
  * This file is a part of brittni and the polar bear's Generative Art Project Template,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,9 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO complete color data found at https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8 (mutedChristmas)
-// TODO complete color data found at https://www.color-hex.com/color-palette/96876 (brightChristmas)
-// TODO make hex color search - put all hex strings in a set, search for the given string
-
-// TODO Complete https://www.color-hex.com/color-palette/78520
-// TODO Complete https://www.color-hex.com/color-palette/56388
+// interface RangeColorFactory {
+//
+// }
+//
+// export { type RangeColorFactory };

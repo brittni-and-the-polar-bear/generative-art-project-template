@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2023 Brittni Watkins.
+# Copyright (C) 2023-2024 Brittni Watkins.
 #
 # This file is a part of brittni and the polar bear's Generative Art Project Template,
 # which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,15 +15,22 @@
 # See the GNU Affero General Public License for more details.
 #
 
-while getopts d: flag
+while getopts d:p: flag
 do
   case "${flag}" in
     d) dev=${OPTARG};;
+    p) sketchPath=${OPTARG};;
     *) dev="false";;
   esac
 done
 
-echo 'Starting the /examples/color/color-grid.ts example.';
+if [ -z "$sketchPath" ]
+then
+  echo 'Missing sketch path. Using default path ./src/sketch.ts';
+  sketchPath='./src/sketch.ts';
+fi
+
+echo "Starting the $sketchPath example.";
 
 echo '(1/2): Removing old output';
 
@@ -32,8 +39,8 @@ sh ./scripts/delete-out.sh
 if [ "$dev" == "true" ]
 then
   echo '(2/2): Building project and starting development server';
-  rollup --config --input ./examples/color/color-grid.ts --watch;
+  rollup --config --input $sketchPath --watch;
 else
   echo '(2/2): Building project';
-  rollup --config --input ./examples/color/color-grid.ts;
+  rollup --config --input $sketchPath;
 fi
