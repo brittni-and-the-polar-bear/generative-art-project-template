@@ -15,23 +15,16 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// import { P5Lib } from "p5-lib";
-// import { randomInt } from "random";
-// import { Color } from "color";
+import CollectionColor from "../collection-color";
 
-// import RGBRangeFactory from "./rgb-range-factory";
-//
-// class BlackColorFactory extends RGBRangeFactory {
-//     // public constructor(p5: P5Lib) {
-//     //     // super(p5, 'black color factory');
-//     // }
-//     //
-//     // public override getRandomColor(): Color {
-//     //     this.p5.colorMode(this.p5.RGB, 255);
-//     //     const gray: number = randomInt(0, 100);
-//     //     return new Color(this.p5.color(gray));
-//     // }
-// }
-//
-// export { BlackColorFactory };
-// export default BlackColorFactory;
+const _cd1624: CollectionColor = {
+    rgb: {r: 205, g: 22, b: 36},
+    hsl: {h: 355, s: 81, l: 45},
+    hexString: '#CD1624',
+    name: 'cartoon violence',
+    htmlName: 'crimson',
+    wikipediaName: 'lava'
+}
+
+export { _cd1624 };
+export default _cd1624;

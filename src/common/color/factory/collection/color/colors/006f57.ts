@@ -15,23 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// import { P5Lib } from "p5-lib";
-// import { randomInt } from "random";
-// import { Color } from "color";
+// TODO complete color data found at https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8 (mutedChristmas)
+// TODO complete color data found at https://www.color-hex.com/color-palette/96876 (brightChristmas)
+// TODO make hex color search - put all hex strings in a set, search for the given string
 
-// import RGBRangeFactory from "./rgb-range-factory";
-//
-// class BlackColorFactory extends RGBRangeFactory {
-//     // public constructor(p5: P5Lib) {
-//     //     // super(p5, 'black color factory');
-//     // }
-//     //
-//     // public override getRandomColor(): Color {
-//     //     this.p5.colorMode(this.p5.RGB, 255);
-//     //     const gray: number = randomInt(0, 100);
-//     //     return new Color(this.p5.color(gray));
-//     // }
-// }
-//
-// export { BlackColorFactory };
-// export default BlackColorFactory;
+// TODO Complete https://www.color-hex.com/color-palette/78520
+// TODO Complete https://www.color-hex.com/color-palette/56388

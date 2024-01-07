@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Brittni Watkins.
+ * Copyright (C) 2023-2024 Brittni Watkins.
  *
  * This file is a part of brittni and the polar bear's Generative Art Project Template,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,6 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export { RGBRangeFactory } from "./rgb-range-factory";
-export { BlackColorFactory } from "./black-color-factory";
-export { BlueColorFactory } from "./blue-color-factory";
+// export { RGBRangeFactory } from "./rgb-range-factory";
+// export { BlackColorFactory } from "./black-color-factory";
+// export { BlueColorFactory } from "./blue-color-factory";

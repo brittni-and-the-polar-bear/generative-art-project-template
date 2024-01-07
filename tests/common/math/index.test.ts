@@ -15,23 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// import { P5Lib } from "p5-lib";
-// import { randomInt } from "random";
-// import { Color } from "color";
+// TODO - Test Math functions
 
-// import RGBRangeFactory from "./rgb-range-factory";
-//
-// class BlackColorFactory extends RGBRangeFactory {
-//     // public constructor(p5: P5Lib) {
-//     //     // super(p5, 'black color factory');
-//     // }
-//     //
-//     // public override getRandomColor(): Color {
-//     //     this.p5.colorMode(this.p5.RGB, 255);
-//     //     const gray: number = randomInt(0, 100);
-//     //     return new Color(this.p5.color(gray));
-//     // }
-// }
-//
-// export { BlackColorFactory };
-// export default BlackColorFactory;
+describe('string map tests', (): void => {
+    test.todo('Tests for StringMap');
+});

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Brittni Watkins.
+ * Copyright (C) 2023-2024 Brittni Watkins.
  *
  * This file is a part of brittni and the polar bear's Generative Art Project Template,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import type { JestConfigWithTsJest } from 'ts-jest';
+import type {JestConfigWithTsJest} from 'ts-jest';
 
 const config: JestConfigWithTsJest = {
     collectCoverage: true,
@@ -27,6 +27,9 @@ const config: JestConfigWithTsJest = {
         '^assets': '<rootDir>/assets',
         '^color$': '<rootDir>/src/common/color',
         '^color/factory$': '<rootDir>/src/common/color/factory',
+        '^color/factory/collection$': '<rootDir>/src/common/color/factory/collection',
+        '^all-colors': '<rootDir>/src/common/color/factory/collection/colors',
+        '^all-collections': '<rootDir>/src/common/color/factory/collection/collections',
         '^p5-lib$': '<rootDir>/src/common/p5',
         '^random$': '<rootDir>/src/common/random',
         '^range$': '<rootDir>/src/common/range',

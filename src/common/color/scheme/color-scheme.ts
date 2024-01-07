@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023-2024 Brittni Watkins.
+ * Copyright (C) 2023 Brittni Watkins.
  *
  * This file is a part of brittni and the polar bear's Generative Art Project Template,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,23 +15,27 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// import { P5Lib } from "p5-lib";
-// import { randomInt } from "random";
-// import { Color } from "color";
+// import { SketchContext, P5Lib } from "p5-lib";
+import { Color } from "color";
 
-// import RGBRangeFactory from "./rgb-range-factory";
-//
-// class BlackColorFactory extends RGBRangeFactory {
-//     // public constructor(p5: P5Lib) {
-//     //     // super(p5, 'black color factory');
-//     // }
-//     //
-//     // public override getRandomColor(): Color {
-//     //     this.p5.colorMode(this.p5.RGB, 255);
-//     //     const gray: number = randomInt(0, 100);
-//     //     return new Color(this.p5.color(gray));
-//     // }
-// }
-//
-// export { BlackColorFactory };
-// export default BlackColorFactory;
+// const p5:P5Lib = SketchContext.p5;
+
+class ColorScheme {
+    // private ColorGroup[] groups
+
+    public get size(): number {
+        return 1; // number of groups
+    }
+
+    public getNextColor(): Color {
+        return new Color();
+    }
+
+    public getNextColorFromGroup(index: number): Color {
+        index++;
+        return new Color();
+    }
+}
+
+export { ColorScheme };
+export default ColorScheme;
