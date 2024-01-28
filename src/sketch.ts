@@ -17,7 +17,7 @@
 
 import P5Lib from 'p5';
 
-import {SketchContext} from "@batpb/genart";
+import {SketchContext} from '@batpb/genart';
 
 import '../assets/styles/sketch.css';
 
