@@ -1,14 +1,18 @@
 # Generative Art Project Template
 
-----
+Copyright (C) 2023-2024 Brittni Watkins
+
+A template for new brittni and the polar bear generative art projects using [TypeScript](https://www.typescriptlang.org/) with [p5.js](https://p5js.org/).
+
+## Summary
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml)
 
-----
+![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-project-template) ![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-project-template)
 
-Copyright (C) 2023 Brittni Watkins
+![GitHub commits since latest release](https://img.shields.io/github/commits-since/brittni-and-the-polar-bear/generative-art-project-template/latest)
 
-A template for new brittni and the polar bear generative art projects using [TypeScript](https://www.typescriptlang.org/) with [p5.js](https://p5js.org/).
+![GitHub contributors](https://img.shields.io/github/contributors-anon/brittni-and-the-polar-bear/generative-art-project-template)
 
 ## LICENSE Information
 
