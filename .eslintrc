@@ -5,11 +5,12 @@
       "./tsconfig.json"
     ]
   },
+  "ignorePatterns": ["*.js"],
   "plugins": [
     "@typescript-eslint"
   ],
   "extends": [
-    "eslint:recommended", 
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/strict",
     "plugin:@typescript-eslint/stylistic"
@@ -29,7 +30,7 @@
     "no-empty-function": "off",
     "@typescript-eslint/no-empty-function": "error",
 
-    "@typescript-eslint/no-extraneous-class": ["error", { "allowStaticOnly": true }],
+    "@typescript-eslint/no-extraneous-class": ["error", {"allowStaticOnly": true}],
 
     "no-extra-semi": "off",
     "@typescript-eslint/no-extra-semi": "error",
@@ -57,8 +58,6 @@
 
     "no-useless-constructor": "off",
     "@typescript-eslint/no-useless-constructor": "error",
-
-    "@typescript-eslint/no-inferrable-types": "off",
 
     "@typescript-eslint/class-literal-property-style": ["error", "getters"]
   }
