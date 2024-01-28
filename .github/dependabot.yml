@@ -9,6 +9,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    target-branch: "main"
     allow:
       - dependency-type: "all"
     versioning-strategy: increase
@@ -19,15 +20,27 @@ updates:
       development-dependencies:
         dependency-type: "development"
         update-types:
-        - "major"
-        - "minor"
-        - "patch"
+          - "major"
+          - "minor"
+          - "patch"
       production-dependencies:
         dependency-type: "production"
         update-types:
-        - "major"
-        - "minor"
-        - "patch"
+          - "major"
+          - "minor"
+          - "patch"
+    reviewers:
+      - "blwatkins"
+      - "azurepolarbear"
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: daily
+    target-branch: "main"
+    commit-message:
+      prefix: "dependabot github-action update"
+      include: "scope"
     reviewers:
       - "blwatkins"
       - "azurepolarbear"
