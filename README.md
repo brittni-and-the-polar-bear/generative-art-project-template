@@ -1,4 +1,4 @@
-# Generative Art Project Template (TypeScript)
+# Generative Art Project Template
 
 ----
 
