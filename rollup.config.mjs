@@ -23,7 +23,6 @@ import terser from '@rollup/plugin-terser';
 import css from 'rollup-plugin-css-only';
 import html from '@rollup/plugin-html';
 import analyzer from 'rollup-plugin-analyzer';
-import dev from 'rollup-plugin-dev';
 import zip from 'rollup-plugin-zip';
 
 import { readFileSync } from 'node:fs';
@@ -45,8 +44,7 @@ export default {
         }),
         eslint({
             include: [
-                './src/**/*.ts',
-                './examples/**/*.ts'
+                './src/**/*.ts'
             ],
             throwOnError: true,
             throwOnWarning: true
@@ -63,11 +61,7 @@ export default {
         analyzer({
             summaryOnly: true
         }),
-        dev({
-            dirs: ['./out/dist'],
-            host: '127.0.0.1',
-            spa: true
-        }),
+        run(),
         zip({
             dir: './out/zip'
         })
