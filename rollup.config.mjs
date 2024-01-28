@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2023 Brittni Watkins.
+ * Copyright (C) 2023-2024 Brittni Watkins.
  *
- * This file is a part of brittni and the polar bear's Generative Art Project Template,
+ * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -23,9 +23,12 @@ import terser from '@rollup/plugin-terser';
 import css from 'rollup-plugin-css-only';
 import html from '@rollup/plugin-html';
 import analyzer from 'rollup-plugin-analyzer';
+import serve from 'rollup-plugin-serve';
 import zip from 'rollup-plugin-zip';
 
 import { readFileSync } from 'node:fs';
+
+const dev = process.env.ROLLUP_WATCH === 'true';
 
 export default {
     input: './src/sketch.ts',
@@ -61,7 +64,11 @@ export default {
         analyzer({
             summaryOnly: true
         }),
-        run(),
+        dev && serve({
+            contentBase: './out/dist',
+            host: '127.0.0.1',
+            port: 8080
+        }),
         zip({
             dir: './out/zip'
         })

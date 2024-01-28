@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2023 Brittni Watkins.
+ * Copyright (C) 2023-2024 Brittni Watkins.
  *
- * This file is a part of brittni and the polar bear's Generative Art Project Template,
+ * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -15,7 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {P5Lib, Color, SketchContext} from "common";
+import P5Lib from 'p5';
+
+import {SketchContext} from "@batpb/genart";
 
 import '../assets/styles/sketch.css';
 
@@ -26,15 +28,15 @@ function sketch(p5: P5Lib): void {
     }
 
     p5.draw = () : void => {
-        p5.background(0, 0, 255);
+        p5.background(0);
         p5.rectMode(p5.CENTER);
 
-        const colorA: Color = new Color(p5.color(255, 0, 255));
-        p5.fill(colorA.color);
+        // const colorA: Color = new Color(p5.color(255, 0, 255));
+        // p5.fill(colorA.color);
         p5.rect(0, 0, 250, 250);
 
-        const colorB: Color = new Color();
-        p5.fill(colorB.color);
+        // const colorB: Color = new Color();
+        // p5.fill(colorB.color);
         p5.rect(0, 0, 75, 75);
     }
 
@@ -43,6 +45,4 @@ function sketch(p5: P5Lib): void {
     }
 }
 
-const p5: P5Lib = new P5Lib(sketch);
-
-export { p5 as sketch };
+new P5Lib(sketch);

@@ -40,6 +40,7 @@
   },
   "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-project-template#readme",
   "dependencies": {
+    "@batpb/genart": "^0.0.1",
     "@types/p5": "^1.7.6",
     "p5": "^1.9.0",
     "tslib": "^2.6.2",
@@ -50,7 +51,6 @@
     "@rollup/plugin-eslint": "^9.0.5",
     "@rollup/plugin-html": "^1.0.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-run": "^3.0.2",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
@@ -58,6 +58,7 @@
     "rollup": "^4.9.1",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-css-only": "^4.5.2",
+    "rollup-plugin-serve": "^1.1.1",
     "rollup-plugin-zip": "^1.0.3"
   }
 }
