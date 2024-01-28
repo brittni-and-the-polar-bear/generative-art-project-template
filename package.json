@@ -1,7 +1,7 @@
 {
   "name": "generative-art-project-template",
   "version": "0.1.0",
-  "description": "A template for new brittni and the polar bear generative art projects using TypeScript with p5",
+  "description": "A template for new brittni and the polar bear generative art projects using TypeScript with p5.js",
   "main": "./src/sketch.ts",
   "scripts": {
     "test:lint": "npx eslint ./tests",
