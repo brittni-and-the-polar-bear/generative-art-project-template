@@ -1,6 +1,6 @@
 # Generative Art Project Template
 
-Copyright (C) 2023-2024 Brittni Watkins
+Copyright (C) 2023-2024 brittni and the polar bear LLC.
 
 A template for new brittni and the polar bear generative art projects using [TypeScript](https://www.typescriptlang.org/) with [p5.js](https://p5js.org/).
 
