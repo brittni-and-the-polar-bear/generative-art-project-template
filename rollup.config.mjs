@@ -24,7 +24,6 @@ import css from 'rollup-plugin-css-only';
 import html from '@rollup/plugin-html';
 import analyzer from 'rollup-plugin-analyzer';
 import serve from 'rollup-plugin-serve';
-import zip from 'rollup-plugin-zip';
 
 import { readFileSync } from 'node:fs';
 
@@ -68,9 +67,6 @@ export default {
             contentBase: './out/dist',
             host: '127.0.0.1',
             port: 8080
-        }),
-        zip({
-            dir: './out/zip'
         })
     ]
 };
