@@ -42,7 +42,7 @@
   "dependencies": {
     "@batpb/genart": "^0.3.2",
     "@types/p5": "^1.7.6",
-    "p5": "^1.9.0"
+    "p5": "^1.9.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
