@@ -15,9 +15,8 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import typescript from '@rollup/plugin-typescript';
 import commonjs from '@rollup/plugin-commonjs';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
+import {nodeResolve} from '@rollup/plugin-node-resolve';
 import eslint from '@rollup/plugin-eslint';
 import terser from '@rollup/plugin-terser';
 import css from 'rollup-plugin-css-only';
@@ -25,7 +24,9 @@ import html from '@rollup/plugin-html';
 import analyzer from 'rollup-plugin-analyzer';
 import serve from 'rollup-plugin-serve';
 
-import { readFileSync } from 'node:fs';
+import ts from 'rollup-plugin-ts';
+
+import {readFileSync} from 'node:fs';
 
 const dev = process.env.ROLLUP_WATCH === 'true';
 
@@ -33,17 +34,12 @@ export default {
     input: './src/sketch.ts',
     output: {
         dir: './out/dist',
-        format: 'umd',
+        format: 'es',
         name: 'GenerativeArtTemplate',
         sourcemap: true,
-        preserveModules: false
+        preserveModules: true,
     },
     plugins: [
-        typescript(),
-        commonjs(),
-        nodeResolve({
-            extensions: ['.ts']
-        }),
         eslint({
             include: [
                 './src/**/*.ts'
@@ -51,7 +47,15 @@ export default {
             throwOnError: true,
             throwOnWarning: true
         }),
+        commonjs(),
+        nodeResolve({
+            extensions: ['.ts']
+        }),
+        ts(),
         terser(),
+        analyzer({
+            summaryOnly: false
+        }),
         exportFavicon(),
         css({
             output: 'bundle.css'
@@ -59,9 +63,6 @@ export default {
         html({
             title: 'Generative Art Template',
             publicPath: './'
-        }),
-        analyzer({
-            summaryOnly: true
         }),
         dev && serve({
             contentBase: './out/dist',

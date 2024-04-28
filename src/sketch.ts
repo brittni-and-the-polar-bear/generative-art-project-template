@@ -35,7 +35,7 @@ function sketch(p5: P5Lib): void {
         p5.fill(colorA.color);
         p5.rect(0, 0, 250, 250);
 
-        const colorB: Color = new Color();
+        const colorB: Color = new Color(p5.color(0, 0, 255));
         p5.fill(colorB.color);
         p5.rect(0, 0, 75, 75);
     }

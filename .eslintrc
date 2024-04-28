@@ -19,7 +19,7 @@
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
 
     "class-methods-use-this": "off",
-    "@typescript-eslint/class-methods-use-this": "error",
+    "@typescript-eslint/class-methods-use-this": "off",
 
     "dot-notation": "off",
     "@typescript-eslint/dot-notation": "error",
@@ -58,7 +58,10 @@
 
     "no-useless-constructor": "off",
     "@typescript-eslint/no-useless-constructor": "error",
-
-    "@typescript-eslint/class-literal-property-style": ["error", "getters"]
+    "@typescript-eslint/class-literal-property-style": [
+      "error",
+      "getters"
+    ],
+    "@typescript-eslint/no-inferrable-types": "off"
   }
 }
