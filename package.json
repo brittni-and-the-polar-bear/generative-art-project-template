@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-project-template#readme",
   "dependencies": {
-    "@batpb/genart": "^0.3.2",
+    "@batpb/genart": "^0.5.0",
     "@types/p5": "^1.7.6",
     "p5": "^1.9.0"
   },
