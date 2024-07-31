@@ -7,7 +7,7 @@ A template for new brittni and the polar bear generative art projects using [Typ
 This template also uses the brittni and the polar bear generative art
 library: [@batpb/genart](https://www.npmjs.com/package/@batpb/genart).
 
-## Summary
+# Summary
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml)
 [![Node.js Build](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/node-build.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/node-build.yml)
@@ -18,7 +18,7 @@ library: [@batpb/genart](https://www.npmjs.com/package/@batpb/genart).
 
 ![GitHub contributors](https://img.shields.io/github/contributors-anon/brittni-and-the-polar-bear/generative-art-project-template)
 
-## LICENSE Information
+# LICENSE Information
 
 The source code of this project is licensed under
 the [GNU Affero General Public Version 3.0 License](https://www.gnu.org/licenses/agpl-3.0.en.html).
