@@ -10,6 +10,7 @@ library: [@batpb/genart](https://www.npmjs.com/package/@batpb/genart).
 ## Summary
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml)
+[![Node.js Build](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/node-build.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/node-build.yml)
 
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-project-template) ![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-project-template)
 
