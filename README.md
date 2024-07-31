@@ -7,7 +7,11 @@ A template for new brittni and the polar bear generative art projects using [Typ
 This template also uses the brittni and the polar bear generative art
 library: [@batpb/genart](https://www.npmjs.com/package/@batpb/genart).
 
-# Summary
+# Summary and Statistics
+
+![GitHub followers](https://img.shields.io/github/followers/brittni-and-the-polar-bear)
+![GitHub Repo stars](https://img.shields.io/github/stars/brittni-and-the-polar-bear/generative-art-project-template)
+![GitHub watchers](https://img.shields.io/github/watchers/brittni-and-the-polar-bear/generative-art-project-template)
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/codeql.yml)
 [![Node.js Build](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/node-build.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-project-template/actions/workflows/node-build.yml)
@@ -16,7 +20,15 @@ library: [@batpb/genart](https://www.npmjs.com/package/@batpb/genart).
 
 ![GitHub commits since latest release](https://img.shields.io/github/commits-since/brittni-and-the-polar-bear/generative-art-project-template/latest)
 
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-project-template)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/brittni-and-the-polar-bear/generative-art-project-template)
+
+![GitHub issues by-label (bug)](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-project-template/bug?color=red)
+![GitHub issues by-label (security)](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-project-template/security?color=red)
+
 ![GitHub contributors](https://img.shields.io/github/contributors-anon/brittni-and-the-polar-bear/generative-art-project-template)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/brittni-and-the-polar-bear/generative-art-project-template)
 
 # LICENSE Information
 
