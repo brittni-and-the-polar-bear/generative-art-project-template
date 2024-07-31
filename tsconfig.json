@@ -9,6 +9,10 @@
     "rootDirs": [
       "./src"
     ],
+    /* JSON Modules */
+    "resolveJsonModule": true,
+    "resolvePackageJsonExports": false,
+    "resolvePackageJsonImports": false,
 
     /* Emit */
     "outDir": "./out/dist",
