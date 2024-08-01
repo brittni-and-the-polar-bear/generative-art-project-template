@@ -12,8 +12,11 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/strict",
-    "plugin:@typescript-eslint/stylistic"
+    "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:@typescript-eslint/stylistic",
+    "plugin:@typescript-eslint/stylistic-type-checked"
   ],
   "rules": {
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
@@ -62,6 +65,8 @@
       "error",
       "getters"
     ],
-    "@typescript-eslint/no-inferrable-types": "off"
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/prefer-for-of": "off"
   }
 }
