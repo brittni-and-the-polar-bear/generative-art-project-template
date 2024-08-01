@@ -21,10 +21,11 @@ import html from '@rollup/plugin-html';
 import json from '@rollup/plugin-json';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
+import typescript from '@rollup/plugin-typescript';
+
 import analyzer from 'rollup-plugin-analyzer';
 import css from 'rollup-plugin-css-only';
 import serve from 'rollup-plugin-serve';
-import ts from 'rollup-plugin-ts';
 
 import {readFileSync} from 'node:fs';
 
@@ -36,8 +37,8 @@ export default {
         dir: './out/dist',
         format: 'es',
         name: 'GenerativeArtTemplate',
-        sourcemap: false,
-        preserveModules: true,
+        sourcemap: true,
+        preserveModules: true
     },
     plugins: [
         eslint({
@@ -52,7 +53,7 @@ export default {
             extensions: ['.ts']
         }),
         json(),
-        ts(),
+        typescript(),
         terser(),
         analyzer({
             summaryOnly: true
