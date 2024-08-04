@@ -1,6 +1,6 @@
 {
   "name": "generative-art-project-template",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A template for new brittni and the polar bear generative art projects using TypeScript with p5.js",
   "main": "",
   "scripts": {
