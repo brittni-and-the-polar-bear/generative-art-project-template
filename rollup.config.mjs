@@ -16,7 +16,6 @@
  */
 
 import commonjs from '@rollup/plugin-commonjs';
-import eslint from '@rollup/plugin-eslint';
 import html from '@rollup/plugin-html';
 import json from '@rollup/plugin-json';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
@@ -41,13 +40,6 @@ export default {
         preserveModules: true
     },
     plugins: [
-        eslint({
-            include: [
-                './src/**/*.ts'
-            ],
-            throwOnError: true,
-            throwOnWarning: true
-        }),
         commonjs(),
         nodeResolve({
             extensions: ['.ts']
