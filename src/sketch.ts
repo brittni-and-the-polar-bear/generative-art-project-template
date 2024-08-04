@@ -25,9 +25,9 @@ function sketch(p5: P5Lib): void {
     p5.setup = (): void => {
         p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
         SketchContext.initialize(p5);
-    }
+    };
 
-    p5.draw = () : void => {
+    p5.draw = (): void => {
         p5.background(0);
         p5.rectMode(p5.CENTER);
 
@@ -38,11 +38,11 @@ function sketch(p5: P5Lib): void {
         const colorB: Color = new Color(p5.color(0, 0, 255));
         p5.fill(colorB.color);
         p5.rect(0, 0, 75, 75);
-    }
+    };
 
-    p5.windowResized = () : void => {
+    p5.windowResized = (): void => {
         p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
-    }
+    };
 }
 
 new P5Lib(sketch);
