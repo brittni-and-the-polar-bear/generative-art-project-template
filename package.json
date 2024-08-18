@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-project-template#readme",
   "dependencies": {
-    "@batpb/genart": "^1.0.1",
+    "@batpb/genart": "^1.1.0",
     "@types/p5": "^1.7.6",
     "p5": "^1.9.4"
   },
@@ -53,15 +53,15 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
-    "@stylistic/eslint-plugin": "^2.6.1",
+    "@stylistic/eslint-plugin": "^2.6.4",
     "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
     "eslint": "^9.8.0",
     "eslint-plugin-es-x": "^8.0.0",
     "eslint-plugin-n": "^17.10.2",
     "eslint-plugin-security": "^3.0.1",
-    "rollup": "^4.20.0",
+    "rollup": "^4.21.0",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-css-only": "^4.5.2",
     "rollup-plugin-serve": "^1.1.1",
@@ -69,6 +69,6 @@
     "ts-node": "^10.9.2",
     "tslib": "^2.6.3",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.0.0"
+    "typescript-eslint": "^8.1.0"
   }
 }
