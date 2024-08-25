@@ -1,6 +1,6 @@
 name: Bug Report
 description: Use this form to submit a bug report.
-title: "Bug Report - [DATE]: [BUG SUMMARY]"
+title: "Bug Report - [BUG SUMMARY]"
 labels: [ "bug" ]
 body:
   - type: input
@@ -10,7 +10,7 @@ body:
       description: What browser are you using?
       placeholder: "Example: Firefox"
     validations:
-      required: true
+      required: false
   - type: input
     id: browserVersion
     attributes:
@@ -19,6 +19,14 @@ body:
       placeholder: "Example: v121.0"
     validations:
       required: false
+  - type: input
+    id: projectVersion
+    attributes:
+      label: Library Version
+      description: What version of the project are you using?
+      placeholder: "Example: v1.0.1"
+    validations:
+      required: true
   - type: checkboxes
     attributes:
       label: Code of Conduct
