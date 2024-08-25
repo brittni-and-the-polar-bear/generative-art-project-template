@@ -1,7 +1,7 @@
 ---
 name: Feature Request
 about: Use this form to request a feature.
-title: "Feature Request - [DATE]: [Feature Summary]"
+title: "Feature Request - [Feature Summary]"
 labels: enhancement
 ---
 
