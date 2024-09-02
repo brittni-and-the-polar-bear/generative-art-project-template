@@ -46,29 +46,29 @@
     "p5": "^1.9.4"
   },
   "devDependencies": {
-    "@eslint/js": "^9.8.0",
+    "@eslint/js": "^9.9.1",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-html": "^1.0.3",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
-    "@stylistic/eslint-plugin": "^2.6.4",
+    "@stylistic/eslint-plugin": "^2.7.2",
     "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "^8.1.0",
-    "@typescript-eslint/parser": "^8.1.0",
-    "eslint": "^9.8.0",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
+    "eslint": "^9.9.1",
     "eslint-plugin-es-x": "^8.0.0",
     "eslint-plugin-n": "^17.10.2",
     "eslint-plugin-security": "^3.0.1",
-    "rollup": "^4.21.0",
+    "rollup": "^4.21.2",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-css-only": "^4.5.2",
     "rollup-plugin-serve": "^1.1.1",
     "size-limit": "^11.1.2",
     "ts-node": "^10.9.2",
-    "tslib": "^2.6.3",
+    "tslib": "^2.7.0",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.1.0"
+    "typescript-eslint": "^8.3.0"
   }
 }
