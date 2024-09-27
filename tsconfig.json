@@ -9,6 +9,7 @@
     "rootDirs": [
       "./src"
     ],
+
     /* JSON Modules */
     "resolveJsonModule": true,
     "resolvePackageJsonExports": false,

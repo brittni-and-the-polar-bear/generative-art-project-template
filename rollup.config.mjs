@@ -35,7 +35,7 @@ export default {
     output: {
         dir: './out/dist',
         format: 'es',
-        name: 'GenArtExplorer_CanvasContext',
+        name: 'GenerativeArtTemplate',
         sourcemap: true,
         preserveModules: true
     },
@@ -55,7 +55,7 @@ export default {
             output: 'bundle.css'
         }),
         html({
-            title: 'GenArt Explorer - Canvas Context',
+            title: 'Generative Art Template',
             publicPath: './'
         }),
         dev && serve({
