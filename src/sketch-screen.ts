@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023-2024 brittni and the polar bear LLC.
+ * Copyright (C) 2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's generative art project template,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,26 +15,22 @@
  * See the GNU Affero General Public License for more details.
  */
 
-html, body {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
+import { CanvasScreen, P5Context } from '@batpb/genart';
 
-body {
-    width: 100vw;
-    height: 100vh;
-}
+export class SketchScreen extends CanvasScreen {
+    public constructor() {
+        super('sketch');
+    }
 
-main {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
+    public draw(): void {
+        P5Context.p5.background(0, 175, 0);
+    }
 
-canvas {
-    grid-row: 1;
-    grid-column: 1;
+    public keyPressed(): void {
+        console.log('keyPressed');
+    }
+
+    public mousePressed(): void {
+        console.log('mousePressed');
+    }
 }

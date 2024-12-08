@@ -17,31 +17,40 @@
 
 import P5Lib from 'p5';
 
-import { Color, SketchContext } from '@batpb/genart';
-
 import '../assets/styles/sketch.css';
+
+import {
+    ASPECT_RATIOS,
+    CanvasContext,
+    P5Context,
+    ScreenHandler
+} from '@batpb/genart';
+
+import { SketchScreen } from './sketch-screen';
 
 function sketch(p5: P5Lib): void {
     p5.setup = (): void => {
-        p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
-        SketchContext.initialize(p5);
+        P5Context.initialize(p5);
+        CanvasContext.buildCanvas(ASPECT_RATIOS.SQUARE, 720, p5.P2D, true);
+        const screen: SketchScreen = new SketchScreen();
+        ScreenHandler.addScreen(screen);
+        ScreenHandler.currentScreen = screen.NAME;
     };
 
     p5.draw = (): void => {
-        p5.background(0);
-        p5.rectMode(p5.CENTER);
+        ScreenHandler.draw();
+    };
 
-        const colorA: Color = new Color(255, 0, 255);
-        p5.fill(colorA.color);
-        p5.rect(0, 0, 250, 250);
+    p5.keyPressed = (): void => {
+        ScreenHandler.keyPressed();
+    };
 
-        const colorB: Color = new Color(0, 0, 255);
-        p5.fill(colorB.color);
-        p5.rect(0, 0, 75, 75);
+    p5.mousePressed = (): void => {
+        ScreenHandler.mousePressed();
     };
 
     p5.windowResized = (): void => {
-        p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+        CanvasContext.resizeCanvas();
     };
 }
 
