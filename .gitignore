@@ -3,10 +3,8 @@
 # node and npm
 node_modules/
 
-# generated files
+# Webpack
 out/
-dist/
-zip/
 
 # WebStorm
 .idea/
