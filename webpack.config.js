@@ -21,6 +21,8 @@
  * for full license details.
  */
 
+// TODO - update copyright
+
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
