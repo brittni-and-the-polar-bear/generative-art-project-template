@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2024 brittni and the polar bear LLC.
  *
- * This file is a part of brittni and the polar bear's rainbow waves algorithmic art project,
+ * This file is a part of brittni and the polar bear's @baptb/genart template,
  * which is released under the GNU Affero General Public License, Version 3.0.
  * You may not use this file except in compliance with the license.
  *
@@ -20,11 +20,6 @@
  * See OUTPUT-LICENSE or go to https://creativecommons.org/licenses/by-nc-nd/4.0/
  * for full license details.
  */
-
-// TODO - update copyright
-// TODO - test bundling
-// TODO - test production build
-// TODO - test stats
 
 const path = require('path');
 
