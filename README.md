@@ -46,10 +46,5 @@ A template for new generative art projects using the [@batpb/genart](https://www
 
 # license
 
-The source code of this project is licensed under the
-[GNU Affero General Public Version 3.0 License](https://www.gnu.org/licenses/agpl-3.0.en.html).
-The full text of the license is included with this source code.
-
-The visual outputs of this distribution of the source code are licensed under the
-[Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+The source code of this project is licensed under the MIT License.
 The full text of the license is included with this source code.
