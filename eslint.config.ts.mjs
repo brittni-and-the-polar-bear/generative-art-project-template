@@ -49,13 +49,13 @@ export default tsEslint.config(
     {
         languageOptions: {
             parser: tsParser,
-            ecmaVersion: 6,
-            sourceType: 'script',
+            ecmaVersion: 2022,
+            sourceType: 'module',
 
             parserOptions: {
                 projectService: {
                     defaultProject: './tsconfig.json'
-                },
+                }
             }
         },
         plugins: {
