@@ -6,25 +6,25 @@ A template for new generative art projects using the [@batpb/genart](https://www
 
 ----
 
-## project stats
+# project stats
 
 ----
 
-### actions
+## actions
 
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/genart-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/genart-template/actions/workflows/codeql.yml)
-[![Node.js Build](https://github.com/brittni-and-the-polar-bear/genart-template/actions/workflows/node-build.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/genart-template/actions/workflows/node-build.yml)
+[![Node.js Build](https://github.com/brittni-and-the-polar-bear/genart-template/actions/workflows/node-js.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/genart-template/actions/workflows/node-js.yml)
 
 ----
 
-### project releases
+## project releases
 
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/genart-template)
 ![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/genart-template)
 
 ----
 
-### github
+## github
 
 ![GitHub followers](https://img.shields.io/github/followers/brittni-and-the-polar-bear)
 ![GitHub Repo stars](https://img.shields.io/github/stars/brittni-and-the-polar-bear/genart-template)
