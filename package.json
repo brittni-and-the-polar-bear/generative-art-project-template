@@ -1,6 +1,6 @@
 {
   "name": "genart-template",
-  "version": "3.0.0-rc",
+  "version": "3.0.0-rc.1",
   "description": "a template for new generative art projects using the @batpb/genart library.",
   "private": true,
   "scripts": {
@@ -48,13 +48,13 @@
   "homepage": "https://github.com/brittni-and-the-polar-bear/genart-template#readme",
   "dependencies": {
     "@batpb/genart": "^2.0.0-rc2",
-    "@types/p5": "^1.7.6",
     "p5": "^1.11.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@stylistic/eslint-plugin": "^2.12.1",
     "@types/eslint__js": "^8.42.3",
+    "@types/p5": "^1.7.6",
     "css-loader": "^7.1.2",
     "eslint": "^9.17.0",
     "eslint-plugin-es-x": "^8.4.1",
