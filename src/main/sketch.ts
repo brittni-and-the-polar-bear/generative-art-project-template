@@ -23,7 +23,7 @@
 
 import P5Lib from 'p5';
 
-import '../assets/styles/sketch.css';
+import '../../assets/styles/sketch.css';
 
 import {
     ASPECT_RATIOS,
