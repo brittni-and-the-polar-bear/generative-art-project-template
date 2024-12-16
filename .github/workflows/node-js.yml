@@ -4,6 +4,7 @@
 name: Node.js Build
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - "main"
@@ -18,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 20.x ]
+        node-version: [ 18.x, 20.x, 22.x ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -29,5 +30,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: npm ci
-      - run: npm run lint
-      - run: npm run build
+      - run: npm run lint:js
+      - run: npm run lint:ts
+      - run: npm run build:dev
+      - run: npm run build:prod
