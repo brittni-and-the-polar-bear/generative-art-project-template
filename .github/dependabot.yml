@@ -46,8 +46,8 @@ updates:
           - "minor"
           - "patch"
     reviewers:
-      - "blwatkins"
       - "azurepolarbear"
+      - "blwatkins"
 
   - package-ecosystem: github-actions
     directory: "/"
@@ -58,5 +58,5 @@ updates:
       prefix: "dependabot github-action update"
       include: "scope"
     reviewers:
-      - "blwatkins"
       - "azurepolarbear"
+      - "blwatkins"
