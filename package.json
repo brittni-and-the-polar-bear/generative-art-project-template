@@ -1,6 +1,6 @@
 {
   "name": "genart-template",
-  "version": "3.0.0-rc.1",
+  "version": "3.0.0",
   "description": "a template for new generative art projects using the @batpb/genart library.",
   "private": true,
   "scripts": {
