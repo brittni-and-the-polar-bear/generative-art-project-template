@@ -213,7 +213,7 @@ export default tsEslint.config(
                 allowStaticOnly: true
             }],
 
-            '@typescript-eslint/no-inferrable-types': 'error',
+            '@typescript-eslint/no-inferrable-types': 'off',
 
             '@typescript-eslint/prefer-for-of': 'error',
 
